@@ -1,0 +1,16 @@
+@import '/src/app/colors.scss';
+
+.icon {
+    color: black;
+    transition: 0.3s;
+    width: 30px;
+    height: 30px;
+    &:hover {
+        transition: 0.3s;
+        color: $primary-color;
+    }
+    &:active {
+        transition: 1s step-start;
+        color: $primary-active-color;
+    }
+}

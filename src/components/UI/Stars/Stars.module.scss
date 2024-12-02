@@ -1,0 +1,19 @@
+@import '/src/app/colors.scss';
+
+.stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.active_star {
+    color: $primary-color;
+    width: 20px;
+    height: 20px;
+}
+.unactive_star {
+  color: #E5E5E5;
+  width: 20px;
+  height: 20px;
+}

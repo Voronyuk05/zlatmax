@@ -1,0 +1,75 @@
+div.react_tel_select_container {
+  height: 30px;
+  border: none;
+  outline: none;
+  z-index: 100;
+  div.react-select__control {
+    height: 30px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
+  }
+  
+  div.react-select__control:hover {
+    border: none;
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
+  }
+    
+  div.react-select__value-container {
+    height: 30px;
+    padding: 0px;
+  }
+    
+  .react-select__indicators {
+    height: 30px;
+  }
+    
+  div.react-select__indicator {
+    box-sizing: border-box;
+    padding: 0px;
+    height: 30px;
+  }
+    
+  .react-select__indicator > svg {
+    height: 30px;
+  }
+    
+  .react-select__indicator-separator {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.react_tel_select_container {
+    height: 30px;
+    border: none;
+    outline: none;
+    div.react-select__control {
+      height: 30px;
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: none;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  div.react_tel_select_container {
+    width: 100%;
+    max-width: 400px;
+    div.react-select__control {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}

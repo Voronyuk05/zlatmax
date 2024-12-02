@@ -1,0 +1,54 @@
+@import '/src/app/colors.scss';
+
+.filter_item {
+    position: relative;
+    width: 100%;
+    .filter_item_title {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background-color: #000000;
+      padding: 13px 30px;
+      h4 {
+        text-transform: capitalize;
+      }
+      svg {
+        width: 30px;
+        height: 30px;
+        color: $primary-color;
+        transform: rotate(180deg);
+        transition: 0.3s ease-in;
+      }
+      .turned {
+        transform: rotate(0deg);
+        transition: 0.3s ease-in;
+      }
+    }
+    .filter_item_body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 30px;
+      transition: 0.3s ease-in;
+      .attribute_option {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        h6 {
+          text-transform: capitalize;
+        }
+      }
+    }
+    .hidden {
+      transition: 0.3s ease-in;
+      display: none;
+    }
+  }

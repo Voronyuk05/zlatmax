@@ -1,0 +1,25 @@
+.swiper_section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 50px;
+  .container {
+    position: relative;
+    width: 95%;
+    max-width: 1370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    overflow-x: hidden;
+    .title {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }  
+  } 
+}

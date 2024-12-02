@@ -1,0 +1,35 @@
+@import '/src/app/colors.scss';
+
+.custom_big_checkbox input[type="checkbox"] {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+  
+.custom_big_checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.custom_big_checkbox__checkbox {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    background: $primary-color;
+    transition: 0.3s ease;
+}
+  
+.custom_big_checkbox input[type="checkbox"]:checked + .custom_big_checkbox__checkbox {
+    background-size: contain;
+    width: 80%;
+    height: 80%;
+    transition:  0.3s ease;
+}

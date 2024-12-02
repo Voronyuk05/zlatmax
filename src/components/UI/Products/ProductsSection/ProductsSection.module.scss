@@ -1,0 +1,46 @@
+.products_section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 50px;
+    .container {
+        width: 95%;
+        max-width: 1590px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        .title {
+            width: 100%;
+            h2 {
+                text-transform: capitalize;
+            }
+        }
+        .sub_title {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .products_path {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            a {
+                text-transform: capitalize;
+            }
+            }
+        }
+        .content {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 30px;
+        }
+    }
+}

@@ -1,0 +1,1982 @@
+{
+    "types": [
+        {
+            "type_id": 123172987,
+            "type_name": "knives",
+            "type_special_attributes": [
+                "total_length",
+                "blade_length",
+                "blade_width"
+            ]
+        },
+        {
+            "type_id": 223172987,
+            "type_name": "medium blade weapon",
+            "type_special_attributes": [
+                "total_length",
+                "blade_length",
+                "blade_width"
+            ]
+            
+        },
+        {
+            "type_id": 323172987,
+            "type_name": "long blade weapon",
+            "type_special_attributes": [
+                "total_length",
+                "blade_length",
+                "blade_width"
+            ]
+        },
+        {
+            "type_id": 423172987,
+            "type_name": "souvenir products",
+            "type_special_attributes": [
+                "total_length",
+                "blade_length",
+                "blade_width"
+            ]
+        },
+        {
+            "type_id": 523172987,
+            "type_name": "related products"
+        }
+    ],
+    "categories": [
+        {
+            "category_id": 133352987,
+            "category_name": "carving knives",
+            "type_id": 123172987
+        },
+        {
+            "category_id": 233352987,
+            "category_name": "travel knives",
+            "type_id": 123172987
+        },
+        {
+            "category_id": 333352987,
+            "category_name": "hunting knives",
+            "type_id": 123172987
+        },
+        {
+            "category_id": 433352987,
+            "category_name": "damask knives",
+            "type_id": 123172987
+        },
+        {
+            "category_id": 533352987,
+            "category_name": "swords",
+            "type_id": 223172987
+        },
+        {
+            "category_id": 633352987,
+            "category_name": "sabers",
+            "type_id": 223172987
+        },
+        {
+            "category_id": 733352987,
+            "category_name": "katanas",
+            "type_id": 223172987
+        },
+        {
+            "category_id": 833352987,
+            "category_name": "cleavers",
+            "type_id": 223172987
+        },
+        {
+            "category_id": 933352987,
+            "category_name": "bastard swords",
+            "type_id": 323172987
+        },
+        {
+            "category_id": 143352987,
+            "category_name": "two-handed swords",
+            "type_id": 323172987
+        },
+        {
+            "category_id": 243352987,
+            "category_name": "halberds",
+            "type_id": 323172987
+        },
+        {
+            "category_id": 343352987,
+            "category_name": "glaives",
+            "type_id": 323172987
+        },
+        {
+            "category_id": 443352987,
+            "category_name": "decorative swords",
+            "type_id": 423172987
+        },
+        {
+            "category_id": 543352987,
+            "category_name": "miniature weapon models",
+            "type_id": 423172987
+        },
+        {
+            "category_id": 643352987,
+            "category_name": "tactical flashlights",
+            "type_id": 523172987
+        },
+        {
+            "category_id": 743352987,
+            "category_name": "headlamps",
+            "type_id": 523172987
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "knife fox",
+            "type_id": 123172987,
+            "category_id": 133352987,
+            "status": "available",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001952",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341231,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248,
+                324341249,
+                324341250
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 227,
+            "blade_length": 112,
+            "blade_width": 24,
+            "price": 119,
+            "rating": 5,
+            "description": "",
+            "imgs": ["https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp", "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp", "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp", "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp"]
+        },
+        {
+            "id": 2,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "knife bullfinch",
+            "type_id": 123172987,
+            "category_id": 233352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341232,
+            "steel": [
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 199,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 3,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "Cold Steel Natchez Bowie",
+            "type_id": 123172987,
+            "category_id": 233352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341235,
+            "steel": [
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 299,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 4,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "karambit",
+            "type_id": 123172987,
+            "category_id": 433352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341233,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 179,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 5,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "Buck 119 Special",
+            "type_id": 123172987,
+            "category_id": 333352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Hunting Icon series knives",
+            "producer_id": 324341232,
+            "steel": [
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 99,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 6,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "Gerber LMF II Infantry",
+            "type_id": 123172987,
+            "category_id": 333352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Hunting Icon series knives",
+            "producer_id": 324341234,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 337,
+            "blade_length": 172,
+            "blade_width": 30,
+            "price": 199,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 7,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "Victorinox Swiss Army Knife",
+            "type_id": 123172987,
+            "category_id": 333352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Pocket series knives",
+            "producer_id": 424341233,
+            "steel": [
+                324341242,
+                324341243,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341263,
+                324341264,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273
+            ],
+            "gilding": [
+                324341281
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 189,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 8,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "Benchmade Griptilian",
+            "type_id": 123172987,
+            "category_id": 233352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Tactical Icon series knives",
+            "producer_id": 324341233,
+            "steel": [
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 227,
+            "blade_length": 132,
+            "blade_width": 25,
+            "price": 129,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 9,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "Shun Classic Santoku Knife.",
+            "type_id": 123172987,
+            "category_id": 433352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 224341233,
+            "steel": [
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 297,
+            "blade_length": 192,
+            "blade_width": 20,
+            "price": 219,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 10,
+            "card_img": "https://morsoe.com/templates/yootheme/cache/c2/0_kokkekniv_92740006_900x900-c260e16c.webp",
+            "name": "Fox 479 Karambit",
+            "type_id": 123172987,
+            "category_id": 433352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341233,
+            "steel": [
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246
+            ],
+            "grip": [
+                324341262,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341282
+            ],
+            "total_length": 197,
+            "blade_length": 94,
+            "blade_width": 18,
+            "price": 149,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 11,
+            "card_img": "https://fujimae.com/10288-zoom_producto/damascus-steel-katana-black.jpg",
+            "name": "katana",
+            "type_id": 223172987,
+            "category_id": 733352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341231,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 299,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 12,
+            "card_img": "https://cdn.shopify.com/s/files/1/0886/3002/files/Trp-Sword-14226124129-v06_medium.png?v=1521632195",
+            "name": "longsword",
+            "type_id": 223172987,
+            "category_id": 533352987,
+            "status": "available",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001952",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341231,
+            "steel": [
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248,
+                324341249,
+                324341250
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 227,
+            "blade_length": 112,
+            "blade_width": 24,
+            "price": 119,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 13,
+            "card_img": "https://cdn.shopify.com/s/files/1/0886/3002/files/Trp-Sword-14226124129-v06_medium.png?v=1521632195",
+            "name": "Gladius",
+            "type_id": 223172987,
+            "category_id": 533352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341235,
+            "steel": [
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 199,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 14,
+            "card_img": "https://cdn.shopify.com/s/files/1/0886/3002/files/Trp-Sword-14226124129-v06_medium.png?v=1521632195",
+            "name": "claymore",
+            "type_id": 223172987,
+            "category_id": 533352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341233,
+            "steel": [
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 299,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 15,
+            "card_img": "https://cdn.shopify.com/s/files/1/0886/3002/files/Trp-Sword-14226124129-v06_medium.png?v=1521632195",
+            "name": "cavalry Saber",
+            "type_id": 223172987,
+            "category_id": 633352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341232,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 179,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 16,
+            "card_img": "https://fujimae.com/10288-zoom_producto/damascus-steel-katana-black.jpg",
+            "name": "kilij",
+            "type_id": 223172987,
+            "category_id": 633352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Hunting Icon series knives",
+            "producer_id": 324341231,
+            "steel": [
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 99,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 17,
+            "card_img": "https://cdn.shopify.com/s/files/1/0886/3002/files/Trp-Sword-14226124129-v06_medium.png?v=1521632195",
+            "name": "US Navy Officer’s Saber",
+            "type_id": 223172987,
+            "category_id": 633352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Hunting Icon series knives",
+            "producer_id": 324341233,
+            "steel": [
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 337,
+            "blade_length": 172,
+            "blade_width": 30,
+            "price": 199,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 18,
+            "card_img": "https://fujimae.com/10288-zoom_producto/damascus-steel-katana-black.jpg",
+            "name": "samurai katana",
+            "type_id": 223172987,
+            "category_id": 733352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Pocket series knives",
+            "producer_id": 324341236,
+            "steel": [
+                324341242,
+                324341243,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341263,
+                324341264,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273
+            ],
+            "gilding": [
+                324341281
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 189,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 19,
+            "card_img": "https://fujimae.com/10288-zoom_producto/damascus-steel-katana-black.jpg",
+            "name": "Tanto",
+            "type_id": 223172987,
+            "category_id": 733352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Tactical Icon series knives",
+            "producer_id": 324341235,
+            "steel": [
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 227,
+            "blade_length": 132,
+            "blade_width": 25,
+            "price": 129,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 20,
+            "card_img": "https://lamsonproducts.com/wp-content/uploads/2023/09/33100-W-1.jpg",
+            "name": "Butcher’s Cleaver",
+            "type_id": 223172987,
+            "category_id": 833352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341234,
+            "steel": [
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 297,
+            "blade_length": 192,
+            "blade_width": 20,
+            "price": 219,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 21,
+            "card_img": "https://lamsonproducts.com/wp-content/uploads/2023/09/33100-W-1.jpg",
+            "name": "Combat Cleaver",
+            "type_id": 223172987,
+            "category_id": 833352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341237,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246
+            ],
+            "grip": [
+                324341262,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341282
+            ],
+            "total_length": 197,
+            "blade_length": 94,
+            "blade_width": 18,
+            "price": 149,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 22,
+            "card_img": "https://lamsonproducts.com/wp-content/uploads/2023/09/33100-W-1.jpg",
+            "name": "Meat Cleaver",
+            "type_id": 223172987,
+            "category_id": 833352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341237,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 299,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 23,
+            "card_img": "https://cdn.shopify.com/s/files/1/0886/3002/files/Trp-Sword-14226124129-v06_medium.png?v=1521632195",
+            "name": "Bastard Sword of Ware",
+            "type_id": 323172987,
+            "category_id": 933352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341233,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 299,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 24,
+            "card_img": "https://cdn11.bigcommerce.com/s-99kn4fj7jr/images/stencil/1280x1280/products/321/579/88WGS_1__31003.1607300814.jpg?c=1",
+            "name": "Wallace Sword",
+            "type_id": 323172987,
+            "category_id": 933352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341232,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 179,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 25,
+            "card_img": "https://cdn11.bigcommerce.com/s-99kn4fj7jr/images/stencil/1280x1280/products/321/579/88WGS_1__31003.1607300814.jpg?c=1",
+            "name": "Zweihänder",
+            "type_id": 323172987,
+            "category_id": 143352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Hunting Icon series knives",
+            "producer_id": 324341231,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 99,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 26,
+            "card_img": "https://cdn11.bigcommerce.com/s-99kn4fj7jr/images/stencil/1280x1280/products/321/579/88WGS_1__31003.1607300814.jpg?c=1",
+            "name": "claymore",
+            "type_id": 323172987,
+            "category_id": 143352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Hunting Icon series knives",
+            "producer_id": 324341233,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 337,
+            "blade_length": 172,
+            "blade_width": 30,
+            "price": 199,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 27,
+            "card_img": "https://fujimae.com/10288-zoom_producto/damascus-steel-katana-black.jpg",
+            "name": "Japanese Naginata",
+            "type_id": 323172987,
+            "category_id": 343352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Pocket series knives",
+            "producer_id": 324341236,
+            "steel": [
+                324341242,
+                324341243,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341263,
+                324341264,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273
+            ],
+            "gilding": [
+                324341281
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 189,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 28,
+            "card_img": "https://cdn11.bigcommerce.com/s-99kn4fj7jr/images/stencil/1280x1280/products/321/579/88WGS_1__31003.1607300814.jpg?c=1",
+            "name": "German Bastard Sword",
+            "type_id": 323172987,
+            "category_id": 933352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Tactical Icon series knives",
+            "producer_id": 324341235,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 227,
+            "blade_length": 132,
+            "blade_width": 25,
+            "price": 129,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 29,
+            "card_img": "https://cdn11.bigcommerce.com/s-99kn4fj7jr/images/stencil/1280x1280/products/321/579/88WGS_1__31003.1607300814.jpg?c=1",
+            "name": "Swiss Halberd",
+            "type_id": 323172987,
+            "category_id": 243352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341234,
+            "steel": [
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 297,
+            "blade_length": 192,
+            "blade_width": 20,
+            "price": 219,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 30,
+            "card_img": "https://cdn11.bigcommerce.com/s-99kn4fj7jr/images/stencil/1280x1280/products/321/579/88WGS_1__31003.1607300814.jpg?c=1",
+            "name": "Greatsword",
+            "type_id": 323172987,
+            "category_id": 143352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341237,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244,
+                324341245,
+                324341246
+            ],
+            "grip": [
+                324341262,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341274,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341282
+            ],
+            "total_length": 197,
+            "blade_length": 94,
+            "blade_width": 18,
+            "price": 149,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 31,
+            "card_img": "https://cdn11.bigcommerce.com/s-99kn4fj7jr/images/stencil/1280x1280/products/321/579/88WGS_1__31003.1607300814.jpg?c=1",
+            "name": "Medieval Battle Halberd",
+            "type_id": 323172987,
+            "category_id": 243352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341237,
+            "steel": [
+                324341241,
+                324341242,
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 299,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 32,
+            "card_img": "https://www.english-heritageshop.org.uk/media/catalog/product/cache/a3b225711045be8da804c8f77b8471be/s/q/squires_excalibur_-_63381.png",
+            "name": "excalibur",
+            "type_id": 423172987,
+            "category_id": 443352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Hunting Icon series knives",
+            "producer_id": 324341233,
+            "steel": [
+                324341241,
+                324341242,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273,
+                324341276
+            ],
+            "gilding": [],
+            "total_length": 337,
+            "blade_length": 172,
+            "blade_width": 30,
+            "price": 199,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 33,
+            "card_img": "https://fujimae.com/10288-zoom_producto/damascus-steel-katana-black.jpg",
+            "name": "katana",
+            "type_id": 423172987,
+            "category_id": 443352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Pocket series knives",
+            "producer_id": 324341236,
+            "steel": [
+                324341242,
+                324341243,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341263,
+                324341264,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341273
+            ],
+            "gilding": [
+                324341281
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 189,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 34,
+            "card_img": "https://m.media-amazon.com/images/I/614xbc0AuxL._AC_UF1000,1000_QL80_.jpg",
+            "name": "viking Sword",
+            "type_id": 423172987,
+            "category_id": 443352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Tactical Icon series knives",
+            "producer_id": 324341235,
+            "steel": [
+                324341243,
+                324341244,
+                324341245,
+                324341246,
+                324341247,
+                324341248
+            ],
+            "grip": [
+                324341261,
+                324341262,
+                324341263,
+                324341264,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341275,
+                324341276
+            ],
+            "gilding": [],
+            "total_length": 227,
+            "blade_length": 132,
+            "blade_width": 25,
+            "price": 129,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 35,
+            "card_img": "https://www.english-heritageshop.org.uk/media/catalog/product/cache/a3b225711045be8da804c8f77b8471be/s/q/squires_excalibur_-_63381.png",
+            "name": "miniature excalibur",
+            "type_id": 423172987,
+            "category_id": 543352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341234,
+            "steel": [
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341262,
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 297,
+            "blade_length": 192,
+            "blade_width": 20,
+            "price": 219,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 36,
+            "card_img": "https://www.english-heritageshop.org.uk/media/catalog/product/cache/a3b225711045be8da804c8f77b8471be/s/q/squires_excalibur_-_63381.png",
+            "name": "mini dagger models",
+            "type_id": 423172987,
+            "category_id": 543352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341237,
+            "steel": [
+                324341241,
+                324341242,
+                324341245,
+                324341246
+            ],
+            "grip": [
+                324341262,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341272,
+                324341274
+            ],
+            "gilding": [],
+            "total_length": 197,
+            "blade_length": 94,
+            "blade_width": 18,
+            "price": 149,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 37,
+            "card_img": "https://fujimae.com/10288-zoom_producto/damascus-steel-katana-black.jpg",
+            "name": "mini katana",
+            "type_id": 423172987,
+            "category_id": 543352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341237,
+            "steel": [
+                324341243,
+                324341244
+            ],
+            "grip": [
+                324341265,
+                324341266,
+                324341267
+            ],
+            "guard": [
+                324341271,
+                324341275,
+                324341276
+            ],
+            "gilding": [
+                324341281,
+                324341282
+            ],
+            "total_length": 237,
+            "blade_length": 122,
+            "blade_width": 22,
+            "price": 299,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 38,
+            "card_img": "https://media.peli.com/img/products/flashlights/7600/peli-products-7600-high-lumens-tactical-torch-t.jpg",
+            "name": "SureFire G2X Tactical",
+            "type_id": 523172987,
+            "category_id": 643352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Tactical Icon series knives",
+            "producer_id": 324341232,
+            "total_length": 227,
+            "price": 129,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 39,
+            "card_img": "https://media.peli.com/img/products/flashlights/7600/peli-products-7600-high-lumens-tactical-torch-t.jpg",
+            "name": "Streamlight ProTac HL-X",
+            "type_id": 523172987,
+            "category_id": 643352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341233,
+            "total_length": 297,
+            "price": 219,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 40,
+            "card_img": "https://cdn.4stand.com/huge/65/b8/65b87bdb8c4b67d3b6df742b678d13b6583c2c50.jpg",
+            "name": "BioLite HeadLamp 330",
+            "type_id": 523172987,
+            "category_id": 743352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341232,
+            "total_length": 197,
+            "price": 149,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        },
+        {
+            "id": 41,
+            "card_img": "https://cdn.4stand.com/huge/65/b8/65b87bdb8c4b67d3b6df742b678d13b6583c2c50.jpg",
+            "name": "Black Diamond Spot 400",
+            "type_id": 523172987,
+            "category_id": 743352987,
+            "status": "sold",
+            "brand": "WUESTHOF (Germany)",
+            "article": "AF0000001953",
+            "series": "Сlassic Icon series knives",
+            "producer_id": 324341233,
+            "total_length": 237,
+            "price": 299,
+            "rating": 5,
+            "description": "",
+            "imgs": []
+        }
+    ],
+    "producers": [
+        {
+            "producer_id": 324341231,
+            "producer_name": "Cold Steel",
+            "producer_img": "https://findlogovector.com/wp-content/uploads/2022/04/cold-steel-logo-vector-2022.png",
+            "founded_at": "1980",
+            "producer_description": "Cold Steel, Inc., is an American retailer of knives/bladed tools, training weapons, swords and other martial arts edged and blunt weapons. Founded in Ventura, California, the company is currently based in Irving, Texas, after an acquisition by GSM Outdoors in 2020. Cold Steel products are manufactured worldwide, including in the United States, Japan, Taiwan, India, Italy, China, and South Africa.",
+            "type_id": [123172987, 223172987, 323172987]
+        },
+        {
+            "producer_id": 324341232,
+            "producer_name": "Benchmade",
+            "producer_description": "Benchmade originally started in California in 1979 as Bali-Song, then changed their name to Pacific Cutlery Corporation in the early 1980s, before settling on 'Benchmade' in 1988. In 1990, the company moved to Clackamas, Oregon, to be closer to existing knife production companies in that area. As part of the process of moving their production from outside vendors to in-house production facilities, the company moved again in 1996, to their own 35,000 square foot facility in Oregon City, Oregon.",
+            "founded_at": "1979",
+            "producer_img": "https://upload.wikimedia.org/wikipedia/en/4/4f/Benchmark_Knife_logo.jpg",
+            "type_id": [123172987, 223172987, 323172987, 423172987]
+        },
+        {
+            "producer_id": 324341233,
+            "producer_name": "KA-BAR",
+            "producer_description": "Ka-Bar s the contemporary popular name for the combat knife first adopted by the United States Marine Corps in November 1942 as the 1219C2 combat knife (later designated the USMC Mark 2 combat knife or Knife, Fighting Utility), and subsequently adopted by the United States Navy as the U.S. Navy utility knife, Mark 2. Ka-Bar is the name of a related knife manufacturing company, Ka-Bar Knives., Inc. (formerly Union Cutlery Co.), of Olean, New York, a subsidiary of the Cutco Corporation.",
+            "founded_at": "1996",
+            "producer_img": "https://res.cloudinary.com/tmh-trading-gmbh/image/private/s--Mc7PUvvG--/c_fill,h_289,w_520/f_auto/q_auto/webshop/media/76/48/d3/1704190397/Brand%20Logos%20500x300px%20Ka%20Bar?_a=AAFIKBs",
+            "type_id": [123172987, 223172987, 323172987, 423172987]
+        },
+        {
+            "producer_id": 324341234,
+            "producer_name": "Buck Knives",
+            "producer_description": "Buck Knives is an American knife brand and manufacturer founded in Mountain Home, Idaho and now located in Post Falls, Idaho. The company has a long history through five generations of the Buck family from 1902 to the present day. Buck Knives primarily manufactures sport and field knives and is credited with inventing the 'folding hunting knife' and popularizing it to such a degree that the term 'buck knife' has become associated with folding lockback knives, including those made by other manufacturers.",
+            "founded_at": "1902",
+            "producer_img": "https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Buck_Knives_%28logo%29.svg/1200px-Buck_Knives_%28logo%29.svg.png",
+            "type_id": [123172987, 223172987, 323172987]
+        },
+        {
+            "producer_id": 324341235,
+            "producer_name": "SOG Knives",
+            "producer_description": "SOG Specialty Knives, Inc. (commonly known as SOG) is an American knife and tool manufacturing company famous for their reproduction SOG Knife from the Vietnam era. SOG manufactures a variety of knives other than the original military inspired designs, many designed for everyday carry (EDC). The company also produces its own line of multi-tools.",
+            "founded_at": "1986",
+            "producer_img": "https://knifeinformer.com/wp-content/uploads/2013/06/Brand-banner-SOG.jpg",
+            "type_id": [123172987, 223172987, 323172987]
+        },
+        {
+            "producer_id": 324341236,
+            "producer_name": "Spyderco",
+            "producer_description": "Spyderco is an American cutlery company based in Golden, Colorado, producing knives and knife sharpeners. Spyderco pioneered many features that are now common in folding knives, including the pocket clip, serrations, and the opening hole. Spyderco has collaborated with 30 custom knife makers, athletes, and self-defense instructors for designs and innovated the usage of 20 different blade materials.",
+            "founded_at": "1978",
+            "producer_img": "https://media.licdn.com/dms/image/v2/C560BAQFCMLF5YvUokQ/company-logo_200_200/company-logo_200_200/0/1630575120271?e=2147483647&v=beta&t=pAvDQ_YXUTi_i97PoMq4yrd0itAGCab29EI8DLEdxvA",
+            "type_id": [123172987, 223172987, 323172987]
+        },
+        {
+            "producer_id": 324341237,
+            "producer_name": "Emerson Knives",
+            "producer_description": "Emerson Knives, Inc. is an American company that produces knives and related products. It was founded in 1996 by custom knifemaker Ernest Emerson in an effort to mass-produce his folding knife designs for the U.S. Military and collector markets. Emerson Knives primarily manufactures tactical folding knives utilizing the Walker linerlock. EKI most commonly machines blades of Crucible's 154CM steel by using the stock-removal method. Small runs of knives have been produced utilizing steels such as CPM S30V steel, CPM S35VN, and Titanium with a carbide edge. ",
+            "founded_at": "1996",
+            "producer_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDGsDnWVfjrXirxsuFe23ZrMySs_H_0XrISQ&s",
+            "type_id": [123172987, 223172987, 323172987]
+            
+        }
+    ],
+    "attributes": [
+        {
+            "type_id": [123172987, 223172987, 323172987, 423172987],
+            "attribute_id": 435621213,
+            "attribute_name": "steel",
+            "attribute_items": [
+                {
+                    "attribute_item_id": 324341241,
+                    "attribute_item_name": "100Х13M"
+                },
+                {
+                    "attribute_item_id": 324341242,
+                    "attribute_item_name": "95Х18"
+                },
+                {
+                    "attribute_item_id": 324341243,
+                    "attribute_item_name": "50Х14MF"
+                },
+                {
+                    "attribute_item_id": 324341244,
+                    "attribute_item_name": "AUS-8"
+                },
+                {
+                    "attribute_item_id": 324341245,
+                    "attribute_item_name": "ELMAX"
+                },
+                {
+                    "attribute_item_id": 324341246,
+                    "attribute_item_name": "RWL-34"
+                },
+                {
+                    "attribute_item_id": 324341247,
+                    "attribute_item_name": "Damask"
+                },
+                {
+                    "attribute_item_id": 324341248,
+                    "attribute_item_name": "К340"
+                },
+                {
+                    "attribute_item_id": 324341249,
+                    "attribute_item_name": "Cast damask steel"
+                },
+                {
+                    "attribute_item_id": 324341250,
+                    "attribute_item_name": "М390"
+                }
+            ]
+        },
+        {
+            "type_id": [123172987, 223172987, 323172987, 423172987],
+            "attribute_id": 435621214,
+            "attribute_name": "grip",
+            "attribute_items": [
+                {
+                    "attribute_item_id": 324341261,
+                    "attribute_item_name": "mercorne"
+                },
+                {
+                    "attribute_item_id": 324341262,
+                    "attribute_item_name": "quartoprene"
+                },
+                {
+                    "attribute_item_id": 324341263,
+                    "attribute_item_name": "bubingo"
+                },
+                {
+                    "attribute_item_id": 324341264,
+                    "attribute_item_name": "Hornbeam"
+                },
+                {
+                    "attribute_item_id": 324341265,
+                    "attribute_item_name": "oak"
+                },
+                {
+                    "attribute_item_id": 324341266,
+                    "attribute_item_name": "combined"
+                },
+                {
+                    "attribute_item_id": 324341267,
+                    "attribute_item_name": "chestnut"
+                }
+            ]
+        },
+        {
+            "type_id": [123172987, 223172987, 323172987, 423172987],
+            "attribute_id": 435621215,
+            "attribute_name": "guard",
+            "attribute_items": [
+                {
+                    "attribute_item_id": 324341271,
+                    "attribute_item_name": "brass"
+                },
+                {
+                    "attribute_item_id": 324341272,
+                    "attribute_item_name": "birch burl"
+                },
+                {
+                    "attribute_item_id": 324341273,
+                    "attribute_item_name": "cast bars"
+                },
+                {
+                    "attribute_item_id": 324341274,
+                    "attribute_item_name": "cast puma"
+                },
+                {
+                    "attribute_item_id": 324341275,
+                    "attribute_item_name": "casting"
+                },
+                {
+                    "attribute_item_id": 324341276,
+                    "attribute_item_name": "metal"
+                }
+            ]
+        },
+        {
+            "type_id": [123172987, 223172987, 323172987, 423172987],
+            "attribute_id": 435621216,
+            "attribute_name": "gilding",
+            "attribute_items": [
+                {
+                    "attribute_item_id": 324341281,
+                    "attribute_item_name": "blade gilding"
+                },
+                {
+                    "attribute_item_id": 324341282,
+                    "attribute_item_name": "gilding of the design on the blade"
+                }
+            ]
+        }
+    ],
+    "reviews": [
+        {
+            "user_id": 908324085,
+            "user_img": "",
+            "user_name": "John Dohn",
+            "user_rate": 5,
+            "user_comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor luctus et consectetur augue. Dolor egestas nunc pellentesque hac fringilla. Enim hac scelerisque eu tellus feugiat vel. Ut ac nec eleifend fermentum dictum ullamcorper phasellus at sed.",
+            "published_at": "2019-06-29",
+            "product_id": 1
+        },
+        {
+            "user_id": 908324086,
+            "user_img": "",
+            "user_name": "Nick Dauda",
+            "user_rate": 4,
+            "user_comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor luctus et consectetur augue. Dolor egestas nunc pellentesque hac fringilla. Enim hac scelerisque eu tellus feugiat vel. Ut ac nec eleifend fermentum dictum ullamcorper phasellus at sed.",
+            "published_at": "2019-06-30",
+            "product_id": 1
+        }
+    ]
+}

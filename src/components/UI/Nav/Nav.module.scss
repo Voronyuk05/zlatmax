@@ -1,0 +1,127 @@
+@import '/src/app/colors.scss';
+
+.wrapper_nav {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141414;
+    z-index: 10;
+    .nav {
+        width: 95%;
+        max-width: 1590px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .products_type {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h5 {
+                position: relative;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+            &:hover {
+                h5 {
+                    color: $primary-color;
+                    &::before {
+                        z-index: 9;
+                        position: absolute;
+                        bottom: -20px;
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+            .products_filters {
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                background-color: #141414;
+                position: absolute;
+                left: 0px;
+                top: 50px;
+                padding-block: 30px;
+                transition: 0.3s;
+                .filters_container {
+                    width: 95%;
+                    max-width: 1590px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    .filter_column {
+                        width: 300px;
+                        height: 450px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        .column_title {
+                            height: 60px;
+                            padding-right: 20px;
+                            a {
+                                text-transform: capitalize;
+                                cursor: pointer;
+                                font-weight: 700;
+                                font-size: 16px;
+                                color: #ffffff;
+                            }
+                        }
+                        .column_items {
+                            width: 100%;
+                            height: 300px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            gap: 15px;
+                            padding: 30px 0px 30px 0px;
+                            border-top: 1px solid #FFFFFF4D;
+                            border-bottom: 1px solid #FFFFFF4D;
+                            a {
+                                text-transform: capitalize;
+                                color: white;
+                                font-size: 16px;
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                        .column_bottom {
+                            height: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            a {
+                                color: $primary-color;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .products_filters {
+                    opacity: 1;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+}
