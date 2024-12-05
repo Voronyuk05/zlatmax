@@ -9,7 +9,6 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser)
 
 // Кастомна логіка для точного пошуку в масиві
-
 const filterData = (data, req) => {
   if (data.length > 0) {
     if(req.query.sortBy === 'asc') {
@@ -51,14 +50,46 @@ server.use((req, res, next) => {
     const db = router.db; 
     let products = db.get('products').filter(product => {
       for (let key of Object.keys(req.query)) {
-        if (product[key] !== undefined && product[key] !== null && product[key] !== '') {
+        const productAttributeKey = product.attributes ? Object.keys(product.attributes).filter((attribute_id) => attribute_id === key)[0] : null
+        const productAttribute = product.attributes[productAttributeKey]
+        if (productAttribute) {
+          if (req.query[key].includes('-')) {
+            const [min, max] = req.query[key].split("-").map(Number)
+            if (JSON.stringify(productAttribute) > max || JSON.stringify(product[key]) < min) {
+              return
+            }
+          } else if (typeof productAttribute === 'string') {
+            if (!productAttribute.toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
+              return
+            }
+          } else if (typeof product[key] === 'number') {
+            const searchedValues = req.query[key].split(",").map(Number)
+            if (searchedValues.length > 1) {
+              for (let value of searchedValues) {         
+                if (product[key] === value) {
+                  return true
+                }
+              }
+              return
+            } else {
+              if (JSON.stringify(product[key]) !== req.query[key]) {
+                return
+              }
+            }
+          } else  {
+            for (let value of searchedValues) {
+              if (!JSON.stringify(productAttribute).includes(value)) {
+                return
+              }
+            }
+          }
+        } else if (key === 'sortBy') {
+        } else if (product[key] === undefined) {
+          return
+        } else if (product[key] !== undefined && product[key] !== null && product[key] !== '') {
           if (req.query[key].includes('-')) {
             const [min, max] = req.query[key].split("-").map(Number)
             if (JSON.stringify(product[key]) > max || JSON.stringify(product[key]) < min) {
-              return
-            }
-          } else if (key === 'rating') {
-            if (JSON.stringify(product[key]) !== req.query[key]) {
               return
             }
           } else if (typeof product[key] === 'string') {
@@ -66,11 +97,20 @@ server.use((req, res, next) => {
               return
             }
           } else if (typeof product[key] === 'number') {
-            if (JSON.stringify(product[key]) !== req.query[key]) {
+            const searchedValues = req.query[key].split(",").map(Number)
+            if (searchedValues.length > 1) {
+              for (let value of searchedValues) {         
+                if (product[key] === value) {
+                  return true
+                }
+              }
               return
+            } else {
+              if (JSON.stringify(product[key]) !== req.query[key]) {
+                return
+              }
             }
           } else  {
-            const searchedValues = req.query[key].split(",").map(Number)
             for (let value of searchedValues) {
               if (!JSON.stringify(product[key]).includes(value)) {
                 return
@@ -94,9 +134,19 @@ server.use((req, res, next) => {
             if (!type[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof type[key] === 'number') {
-            if (JSON.stringify(type[key]) !== req.query[key]) {
+          } else if (typeof product[key] === 'number') {
+            const searchedValues = req.query[key].split(",").map(Number)
+            if (searchedValues.length > 1) {
+              for (let value of searchedValues) {         
+                if (product[key] === value) {
+                  return true
+                }
+              }
               return
+            } else {
+              if (JSON.stringify(product[key]) !== req.query[key]) {
+                return
+              }
             }
           } else if (!type[key].includes(req.query[key])) {
             return
@@ -117,9 +167,19 @@ server.use((req, res, next) => {
             if (!category[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof category[key] === 'number') {
-            if (JSON.stringify(category[key]) !== req.query[key]) {
+          } else if (typeof product[key] === 'number') {
+            const searchedValues = req.query[key].split(",").map(Number)
+            if (searchedValues.length > 1) {
+              for (let value of searchedValues) {         
+                if (product[key] === value) {
+                  return true
+                }
+              }
               return
+            } else {
+              if (JSON.stringify(product[key]) !== req.query[key]) {
+                return
+              }
             }
           } else if (!category[key].includes(req.query[key])) {
             return
@@ -139,12 +199,27 @@ server.use((req, res, next) => {
             if (!producer[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof producer[key] === 'number') {
-            if (JSON.stringify(category[key]) !== req.query[key]) {
+          } else if (typeof product[key] === 'number') {
+            const searchedValues = req.query[key].split(",").map(Number)
+            if (searchedValues.length > 1) {
+              for (let value of searchedValues) {         
+                if (product[key] === value) {
+                  return true
+                }
+              }
               return
+            } else {
+              if (JSON.stringify(product[key]) !== req.query[key]) {
+                return
+              }
             }
-          } else if (!producer[key].includes(req.query[key])) {
-            return
+          } else  {
+            const searchedValues = req.query[key].split(",").map(Number)
+            for (let value of searchedValues) {
+              if (!JSON.stringify(producer[key]).includes(value)) {
+                return
+              }
+            }
           }
         }
       }
@@ -153,6 +228,45 @@ server.use((req, res, next) => {
     producers = filterData(producers, req)
     
     res.json(producers);
+  } else if (req.method === 'GET' && req.url.includes('/attributes_categories')) {
+    const db = router.db; 
+    let attributesCategories = db.get('attributes_categories').filter(attributesCategory => {
+      for (let key of Object.keys(req.query)) {
+        if (attributesCategory[key] !== undefined && attributesCategory[key] !== null && attributesCategory[key] !== '') {
+          if (typeof attribute[key] === 'string') {
+            if (!attributesCategory[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
+              return
+            }
+          } else if (typeof product[key] === 'number') {
+            const searchedValues = req.query[key].split(",").map(Number)
+            if (searchedValues.length > 1) {
+              for (let value of searchedValues) {         
+                if (product[key] === value) {
+                  return true
+                }
+              }
+              return
+            } else {
+              if (JSON.stringify(product[key]) !== req.query[key]) {
+                return
+              }
+            }
+          } else  {
+            const searchedValues = req.query[key].split(",").map(Number)
+            for (let value of searchedValues) {
+              if (!JSON.stringify(attributesCategory[key]).includes(value)) {
+                return
+              }
+            }
+          }
+        }
+      }
+      return true
+    }).value();
+    
+    attributesCategories = filterData(attributesCategories, req)
+
+    res.json(attributesCategories);
   } else if (req.method === 'GET' && req.url.includes('/attributes')) {
     const db = router.db; 
     let attributes = db.get('attributes').filter(attribute => {
@@ -162,9 +276,19 @@ server.use((req, res, next) => {
             if (!attribute[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof attribute[key] === 'number') {
-            if (JSON.stringify(attribute[key]) !== req.query[key]) {
+          } else if (typeof product[key] === 'number') {
+            const searchedValues = req.query[key].split(",").map(Number)
+            if (searchedValues.length > 1) {
+              for (let value of searchedValues) {         
+                if (product[key] === value) {
+                  return true
+                }
+              }
               return
+            } else {
+              if (JSON.stringify(product[key]) !== req.query[key]) {
+                return
+              }
             }
           } else  {
             const searchedValues = req.query[key].split(",").map(Number)
@@ -195,9 +319,19 @@ server.use((req, res, next) => {
             if (!review[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof review[key] === 'number') {
-            if (JSON.stringify(review[key]) !== req.query[key]) {
+          } else if (typeof product[key] === 'number') {
+            const searchedValues = req.query[key].split(",").map(Number)
+            if (searchedValues.length > 1) {
+              for (let value of searchedValues) {         
+                if (product[key] === value) {
+                  return true
+                }
+              }
               return
+            } else {
+              if (JSON.stringify(product[key]) !== req.query[key]) {
+                return
+              }
             }
           } else if (!review[key].includes(req.query[key])) {
             return

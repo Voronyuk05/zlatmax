@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useGetCategoriesByTypeId } from '../../../hooks/categoriesHooks/useGetCategoriesByTypeId';
 import { useGetAllTypes } from '@/hooks/typesHooks/useGetAllTypes'
-import { useGetAllAttributes } from '@/hooks/attributesHooks/useGetAllAttributes';
+import { useGetAttributesByTypeId } from '@/hooks/attributesHooks/useGetAttributesByTypeId';
 import { Headings } from '../Headings/Headings';
 import Link from 'next/link';
 import styles from './Nav.module.scss'
@@ -10,7 +10,7 @@ export const Nav = () => {
     const [hoveredType, setHoveredType] = useState(0)
     const {data: typesData} = useGetAllTypes()
     const {data: catergoriesByTypeData} = useGetCategoriesByTypeId(hoveredType)
-    const {data: attributesData} = useGetAllAttributes()
+    const {data: attributesData} = useGetAttributesByTypeId(hoveredType)
     
     if (typesData)
     return (
@@ -37,21 +37,22 @@ export const Nav = () => {
                                         </div>
                                     </div>
                                     {attributesData.map(({attribute_id, attribute_items, attribute_name}) => {
-                                        const slicedItems = attribute_items.slice(0, 6)
-                                        
-                                        return (<div className={styles.filter_column} key={attribute_id}>
-                                            <div className={styles.column_title}>
-                                                <Link href={`/products?type_id=${type_id}`}>{`${attribute_name}`}</Link>
-                                            </div>
-                                            <div className={styles.column_items}>
-                                                {slicedItems.map(({attribute_item_id, attribute_item_name}) => (
-                                                    <Link key={attribute_item_name} href={`/products?type_id=${type_id}&${attribute_name}=${attribute_item_id}`}>{attribute_item_name}</Link>
-                                                ))}
-                                            </div>
-                                            <div className={styles.column_bottom}>
-                                                <Link href={`/products?type_id=${type_id}`}>See all</Link>
-                                            </div>
-                                        </div>)
+                                        if (attribute_items) {
+                                            const slicedItems = attribute_items.slice(0, 6)
+                                            return (<div className={styles.filter_column} key={attribute_id}>
+                                                <div className={styles.column_title}>
+                                                    <Link href={`/products?type_id=${type_id}`}>{`${attribute_name}`}</Link>
+                                                </div>
+                                                <div className={styles.column_items}>
+                                                    {slicedItems.map(({attribute_item_id, attribute_item_name}) => (
+                                                        <Link key={attribute_item_name} href={`/products?type_id=${type_id}&${attribute_name}=${attribute_item_id}`}>{attribute_item_name}</Link>
+                                                    ))}
+                                                </div>
+                                                <div className={styles.column_bottom}>
+                                                    <Link href={`/products?type_id=${type_id}`}>See all</Link>
+                                                </div>
+                                            </div>)
+                                        }
                                     })}
                                 </div>
                             </div>

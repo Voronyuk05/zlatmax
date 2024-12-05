@@ -10,22 +10,22 @@ import { ISearchParametrs } from '@/types/searchParameters.types';
 import styles from './ProductArticle.module.scss'
 
 export const ProductArticle = ({productData, searchParamsObj}: {productData: IProduct, searchParamsObj: ISearchParametrs}) => {
-    const {imgs, type_id, name, article, brand, series, rating} = productData
+    const {imgs, type_id, name, article, brand, series, attributes, rating} = productData
     const {data: productAttributes} = useGetAttributesByTypeId(type_id)
     const [status, setStatus] = useState<string>('available')
     
     useEffect(() => {
         const statusControl = productAttributes?.map(({attribute_name}) => {
-            const productAttribute = String(productData[attribute_name])
+            const productAttribute = attributes ? attributes[attribute_name] : ''
             const searchParamAttribute = searchParamsObj[attribute_name]
-            if (searchParamsObj[attribute_name]) {
+            if (searchParamsObj[attribute_name] && productAttribute) {
                 if (typeof productAttribute === 'number') {
-                    if (productAttribute !== searchParamAttribute) {
+                    if (String(productAttribute) !== searchParamAttribute) {
                         return false              
                     } else {
                         return true
                     }
-                } else if (!productAttribute.includes(searchParamAttribute)) {  
+                } else if (!String(productAttribute).includes(searchParamAttribute)) {  
                     return false  
                 } else {
                     return true
@@ -72,12 +72,16 @@ export const ProductArticle = ({productData, searchParamsObj}: {productData: IPr
                     </div>
                     <hr />
                     <div className={styles.column}>
-                        {productAttributes?.map(({attribute_id, attribute_name, attribute_items}) => (
-                            <div className={styles.attribute} key={attribute_id}>
-                                <Headings heading='h5' color='black' weight='500'>{attribute_name}</Headings>
-                                <AttributeSelect attributeItems={attribute_items} searchParamName={attribute_name} filterParamLabel={attribute_name} />
-                            </div>
-                        ))}
+                        {productAttributes?.map(({attribute_id, attribute_name, attribute_items}) => {
+                            if (attribute_items) {
+                                return (
+                                    <div className={styles.attribute} key={attribute_id}>
+                                        <Headings heading='h5' color='black' weight='500'>{attribute_name}</Headings>
+                                        <AttributeSelect attributeItems={attribute_items} searchParamName={attribute_name} filterParamLabel={attribute_name} />
+                                    </div>
+                                )
+                            }
+                        })}
                     </div>
                     <hr />
                     <div className={styles.row}>

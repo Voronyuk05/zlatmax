@@ -21,6 +21,12 @@ class ProducersServices {
             ({data}) => data
         )
     }
+
+    async getProducersByTypeId(typeId: number) {
+        return await axios.get<IProducer[]>(`${this.URL}?type_id=${typeId}`).then(
+            ({data}) => data
+        )
+    }
 }
 
 const producersServices = new ProducersServices()

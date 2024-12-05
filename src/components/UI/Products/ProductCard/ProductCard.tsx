@@ -14,7 +14,7 @@ import { LikeIcon, BasketIcon, ComparisonIcon } from "../../Icons/Icons";
 import styles from './ProductCard.module.scss'
 
 export const ProductCard = ({data}: {data: IProduct}) => {
-    const { id, type_id, card_img, name, price, rating,} = data
+    const { id, type_id, card_img, name, price, attributes, rating} = data
     const {push} = useRouter()
     const dispatch = useAppDispatch()
     const basketItems = useAppSelector(selectBasketItems)
@@ -62,25 +62,27 @@ export const ProductCard = ({data}: {data: IProduct}) => {
                 <div className={styles.row}>
                     <Headings heading="h4" color="black" weight="600">{name}</Headings>
                 </div>
-                {productAttributeData?.length ? <div className={styles.row}>
+                {/* {productAttributeData?.length && attributes ? <div className={styles.row}>
                         {productAttributeData && productAttributeData[0] && productAttributeData[0].attribute_items.map(({attribute_item_id, attribute_item_name}) => {
-                            if (data[productAttributeData[0].attribute_name] && data[productAttributeData[0].attribute_name][0] === attribute_item_id) {
+                            const productAttribute = attributes.filter(({attribute_name}) => attribute_name === attribute_name)[0]
+                            if (attributes[0] && productAttribute.attribute_items[0] === attribute_item_id) {
                                 return  <Headings key={attribute_item_id} heading="h6" color="secondary" weight="600">{attribute_item_name}</Headings>
                             }
                         })}
                         <Headings heading="h6" color="secondary" weight="600">
                             {`${
-                                [1,2].map((value) => {
-                                    const attributeName = productAttributeData[value].attribute_name
-                                    return ` ${productAttributeData[value].attribute_items.filter(({attribute_item_id, attribute_item_name}) => {
-                                        if (data[attributeName] && typeof data[attributeName] === 'object' && typeof data[attributeName][value] ==='number' && data[attributeName][value] === attribute_item_id) {
-                                            return  attribute_item_name
+                                attributes.length >= 2 ? [1,2].map((value) => {
+                                    
+                                    return ` ${productAttributeData[value].attribute_items.filter(({attribute_item_id}) => {
+                                    const productAttribute = attributes.filter(({attribute_name}) => attribute_name === productAttributeData[value].attribute_name)[0]
+                                        if (productAttribute && productAttribute.attribute_items[0] === attribute_item_id) {
+                                            return  true
                                         }
-                                    })[0].attribute_item_name}`
-                                })
+                                    })[0]?.attribute_item_name}`
+                                }) : ''
                             }`}
                         </Headings>
-                </div> : <div></div>}
+                </div> : <div></div>} */}
                 <div className={styles.row}>
                     <Stars rating={rating}/>
                     <Headings heading="h6" color="secondary" weight="600">{`${reviewsData?.length} reviews`}</Headings>
