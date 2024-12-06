@@ -77,6 +77,7 @@ server.use((req, res, next) => {
               }
             }
           } else  {
+            const searchedValues = req.query[key].split(",").map(Number)
             for (let value of searchedValues) {
               if (!JSON.stringify(productAttribute).includes(value)) {
                 return
@@ -134,17 +135,17 @@ server.use((req, res, next) => {
             if (!type[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof product[key] === 'number') {
+          } else if (typeof type[key] === 'number') {
             const searchedValues = req.query[key].split(",").map(Number)
             if (searchedValues.length > 1) {
               for (let value of searchedValues) {         
-                if (product[key] === value) {
+                if (type[key] === value) {
                   return true
                 }
               }
               return
             } else {
-              if (JSON.stringify(product[key]) !== req.query[key]) {
+              if (JSON.stringify(type[key]) !== req.query[key]) {
                 return
               }
             }
@@ -167,17 +168,17 @@ server.use((req, res, next) => {
             if (!category[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof product[key] === 'number') {
+          } else if (typeof category[key] === 'number') {
             const searchedValues = req.query[key].split(",").map(Number)
             if (searchedValues.length > 1) {
               for (let value of searchedValues) {         
-                if (product[key] === value) {
+                if (category[key] === value) {
                   return true
                 }
               }
               return
             } else {
-              if (JSON.stringify(product[key]) !== req.query[key]) {
+              if (JSON.stringify(category[key]) !== req.query[key]) {
                 return
               }
             }
@@ -199,17 +200,17 @@ server.use((req, res, next) => {
             if (!producer[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof product[key] === 'number') {
+          } else if (typeof producer[key] === 'number') {
             const searchedValues = req.query[key].split(",").map(Number)
             if (searchedValues.length > 1) {
               for (let value of searchedValues) {         
-                if (product[key] === value) {
+                if (producer[key] === value) {
                   return true
                 }
               }
               return
             } else {
-              if (JSON.stringify(product[key]) !== req.query[key]) {
+              if (JSON.stringify(producer[key]) !== req.query[key]) {
                 return
               }
             }
@@ -238,16 +239,16 @@ server.use((req, res, next) => {
               return
             }
           } else if (typeof product[key] === 'number') {
-            const searchedValues = req.query[key].split(",").map(Number)
+            const attributesCategory = req.query[key].split(",").map(Number)
             if (searchedValues.length > 1) {
               for (let value of searchedValues) {         
-                if (product[key] === value) {
+                if (attributesCategory[key] === value) {
                   return true
                 }
               }
               return
             } else {
-              if (JSON.stringify(product[key]) !== req.query[key]) {
+              if (JSON.stringify(attributesCategory[key]) !== req.query[key]) {
                 return
               }
             }
@@ -276,17 +277,17 @@ server.use((req, res, next) => {
             if (!attribute[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof product[key] === 'number') {
+          } else if (typeof attribute[key] === 'number') {
             const searchedValues = req.query[key].split(",").map(Number)
             if (searchedValues.length > 1) {
               for (let value of searchedValues) {         
-                if (product[key] === value) {
+                if (attribute[key] === value) {
                   return true
                 }
               }
               return
             } else {
-              if (JSON.stringify(product[key]) !== req.query[key]) {
+              if (JSON.stringify(attribute[key]) !== req.query[key]) {
                 return
               }
             }
@@ -319,17 +320,17 @@ server.use((req, res, next) => {
             if (!review[key].toLocaleLowerCase().includes(String(req.query[key]).toLocaleLowerCase())) {
               return
             }
-          } else if (typeof product[key] === 'number') {
+          } else if (typeof review[key] === 'number') {
             const searchedValues = req.query[key].split(",").map(Number)
             if (searchedValues.length > 1) {
               for (let value of searchedValues) {         
-                if (product[key] === value) {
+                if (review[key] === value) {
                   return true
                 }
               }
               return
             } else {
-              if (JSON.stringify(product[key]) !== req.query[key]) {
+              if (JSON.stringify(review[key]) !== req.query[key]) {
                 return
               }
             }
