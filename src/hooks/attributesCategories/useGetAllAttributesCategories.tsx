@@ -1,4 +1,4 @@
-import attributesCategoriesServices from "@/services/attributesCategories.service";
+import attributesCategoriesServices from "@/services/apiServices/attributesCategories.service";
 import { useQuery } from "@tanstack/react-query";
 
 export const useGetAllAttributesCategories = () => {

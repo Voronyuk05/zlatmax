@@ -1,4 +1,4 @@
-import { IAttributesCategory } from '../types/apiTypes/attributesCategories.types';
+import { IAttributesCategory } from '../../types/apiTypes/attributesCategories.types';
 import axios from "axios"
 
 class AttributesCategoriesServices {
@@ -10,7 +10,7 @@ class AttributesCategoriesServices {
         )
     }
 
-    async getAttributesCategoryById(id: number) {
+    async getAttributesCategoryById(id: number | string) {
         return await axios.get<IAttributesCategory[]>(`${this.URL}?attribute_id=${id}`).then(
             ({data}) => data
         )

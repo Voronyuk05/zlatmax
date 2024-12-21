@@ -10,7 +10,7 @@ class TypesServices {
         )
     }
 
-    async getTypeById(id: number) {
+    async getTypesById(id: number | string) {
         return await axios.get<IType[]>(`${this.URL}?type_id=${id}`).then(
             ({data}) => data
         )

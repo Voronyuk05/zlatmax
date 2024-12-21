@@ -1,4 +1,4 @@
-
+@import '/src/app/colors.scss';
 
 :root {
   --background: #ffffff;
@@ -143,4 +143,42 @@ div.swiper-slide-thumb-active img {
   height: 100%;
   display: flex;
   overflow: visible;
+}
+
+div.react-select-container {
+
+  outline: $primary-color;
+  div.react-select__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: $primary-color;
+    border-color: $primary-color;
+    box-shadow: 0px 0px 0px 1px $primary-color;;
+
+  }
+  
+  div.react-select__control:hover {
+    outline: $primary-color;
+    border-color: $primary-color;
+    box-shadow: 0px 0px 0px 1px $primary-color;
+  }
+
+  div.react-select__control--menu-is-open {
+
+  }
+
+  div.react-select__menu {
+    z-index: 12;
+  }
+
+  div.react-select__option {
+    &:hover {
+      background-color: $primary-bg-color;
+    }
+  }
+
+  div.react-select__option--is-selected {
+    background-color: $primary-color;
+  }
 }

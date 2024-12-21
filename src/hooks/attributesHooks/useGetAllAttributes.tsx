@@ -1,4 +1,4 @@
-import attributesServices from "@/services/attributes.service";
+import attributesServices from "@/services/apiServices/attributes.service";
 import { useQuery } from "@tanstack/react-query";
 
 export const useGetAllAttributes = () => {

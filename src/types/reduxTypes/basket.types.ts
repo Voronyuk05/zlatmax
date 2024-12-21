@@ -4,25 +4,24 @@ export interface IBasketState {
 
 export interface IBasketItem {
     [key: number]: {
-        product: IBasketProduct
+        product: IBasketProductMark
         amount: number
     }
 }
 
-export interface IBasketProduct  {
-    id: number
-    card_img: string
-    name: string
-    type_id: number
-    category_id: number
-    status: string
-    brand: string
-    series: string
-    article: string
-    producer_id: number
+export interface IBasketProductMark {
+    product_mark_id: number,
+    product_id: number,
+    card_img: string,
+    status: string,
+    article: string,
+    attributes_categories?: number[]
+    attributes?: IProductAttribute
     price: number
     rating: number
-    description: string
-    imgs: string[]
+    imgs: string[],
 }
 
+export interface IProductAttribute {
+    [key: string]:  string | number
+}

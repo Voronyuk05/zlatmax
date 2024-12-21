@@ -1,7 +1,7 @@
-import categoriesServices from "@/services/categories.service";
+import categoriesServices from "@/services/apiServices/categories.service";
 import { useQuery } from "@tanstack/react-query";
 
-export const useGetCategoriesByTypeId = (typeId: number) => {
+export const useGetCategoriesByTypeId = (typeId: number | string) => {
     const {data, isLoading} = useQuery({
         queryKey: ['categories by type id', typeId],
         queryFn: () => categoriesServices.getCategoriesByTypeId(typeId),

@@ -1,3 +1,5 @@
+@import '/src/app/colors.scss';
+
 .product_article {
     width: 100%;
     display: flex;
@@ -7,9 +9,8 @@
     .container {
       width: 95%;
       max-width: 1590px;
-      height: 800px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 30px;
       .content {
@@ -35,12 +36,60 @@
             flex-wrap: wrap;
             column-gap: 30px;
             row-gap: 10px;
+            .status {
+              width: 100%;
+            }
+          }
+          .product_amount_switcher {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            button {
+              border-radius: 0px;
+              width: 50px;
+              height: 50px;
+              padding: 0px;
+              font-size: 18px;
+            }
+            .product_amount {
+              width: 50px;
+              height: 50px;
+              background-color: #D2D2D212;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
           }
           .interactions {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+            button {
+              height: 50px;
+              font-size: 18px
+            }
+            .add_to_cart_button {
+              svg {
+                color: white;
+              }
+              &:hover {
+                svg {
+                  color: $primary-color;
+                }
+              }
+            }
+            .go_to_cart_button {
+              svg {
+                color: $primary-color;
+              }
+              &:hover {
+                svg {
+                  color: white;
+                }
+              }
+            }
           }
           h3 {
             text-transform: capitalize;
@@ -62,9 +111,12 @@
             gap: 20px;
           }
           .attribute {
+            width: 100%;
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
+            text-transform: capitalize;
           }
         }
       }

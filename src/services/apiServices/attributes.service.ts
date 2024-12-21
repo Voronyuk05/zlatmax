@@ -1,4 +1,4 @@
-import { IAttribute } from '../types/apiTypes/attributes.types';
+import { IAttribute } from '../../types/apiTypes/attributes.types';
 import axios from "axios"
 
 class AttributesServices {
@@ -10,19 +10,19 @@ class AttributesServices {
         )
     }
 
-    async getAttributesById(id: number) {
+    async getAttributeById(id: number | string) {
         return await axios.get<IAttribute[]>(`${this.URL}?attribute_id=${id}`).then(
             ({data}) => data
         )
     }
 
-    async getAttributesByName(name: string) {
+    async getAttributeByName(name: string) {
         return await axios.get<IAttribute[]>(`${this.URL}?attribute_name=${name}`).then(
             ({data}) => data
         )
     }
 
-    async getAttributesByTypeId(typeId: number) {
+    async getAttributesByTypeId(typeId: number | string) {
         return await axios.get<IAttribute[]>(`${this.URL}?type_id=${typeId}`).then(
             ({data}) => data
         )
@@ -31,4 +31,4 @@ class AttributesServices {
 
 const attributesServices = new AttributesServices()
 
-export default attributesServices
+export default attributesServices 

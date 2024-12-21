@@ -1,4 +1,4 @@
-import reviewsServices from "@/services/reviews.service";
+import reviewsServices from "@/services/apiServices/reviews.service";
 import { useQuery } from "@tanstack/react-query";
 
 export const useGetAllReviews = () => {

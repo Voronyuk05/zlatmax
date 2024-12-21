@@ -16,29 +16,46 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            .products_filters {
-                svg {
+            padding-top: 20px;
+            .type_filters {
+                .arrow_back {
                     position: absolute;
                     top: -40px;
                     left: -20px;
-                    width: 30px;
-                    height: 30px;
+                    width: 40px;
+                    height: 40px;
                     color: white;
                 }
                 .filter_column {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
-                    a {
-                        text-transform: capitalize;
-                        font-size: 26px;
-                        color: white;
-                        
+                    .filter_item {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+                        svg {
+                            position: relative;
+                            top: 0px;
+                            left: 0px;
+                        }
+                        h4 {
+                            text-transform: capitalize;
+                            font-size: 26px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                        }
                     }
                 }
             }
             h3 {
                 text-transform: capitalize;
+                font-size: 26px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
             }
         }
     }
@@ -49,21 +66,12 @@
         padding: 10px;
         .nav {
             .products_type {
-                .products_filters {
-                    svg {
+                .type_filters {
+                    .arrow_back {
                         position: absolute;
-                        top: -40px;
+                        top: -30px;
                         left: -10px;
                     }
-                    .filter_column {
-                        a {
-                            font-size: 20px;
-                            
-                        }
-                    }
-                }
-                h3 {
-                    font-size: 20px;
                 }
             }
         }

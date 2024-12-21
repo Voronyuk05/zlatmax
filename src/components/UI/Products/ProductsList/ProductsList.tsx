@@ -1,14 +1,16 @@
-import { IProduct } from '@/types/apiTypes/products.types'
+'use client'
+import dynamic from 'next/dynamic'
+import { IProductMark } from '@/types/apiTypes/productsMarks.type'
 import styles from './ProductsList.module.scss'
-import { ProductCard } from '../ProductCard/ProductCard'
+const ProductMarkCard = dynamic(() => import('../ProductMarkCard/ProductMarkCard'), {ssr: false})
 
-export const ProductsList = ({data}: {data: IProduct[]}) => {
+export const ProductsList = ({data}: {data: IProductMark[]}) => {
     return (
         <div className={styles.products_list}>
-            {data.map((data) => (
-                <ProductCard 
-                key={data.id}
-                data={data} />
+            {data.map((productMarkData) => (
+                <ProductMarkCard 
+                key={productMarkData.product_mark_id}
+                productMarkData={productMarkData}/>
             ))}
         </div>
     )

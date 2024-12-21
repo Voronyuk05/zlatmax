@@ -1,0 +1,121 @@
+@import '/src/app/colors.scss';
+
+.product_card {
+    width: 375px;
+    height: 560px;
+    position: relative;
+    box-shadow: 0px 4px 20px 0px #0000001A;
+    border-radius: 5px;
+    transform: translateY(-10%);
+    z-index: 0;
+    opacity: 0;
+    overflow: hidden;
+    .card_container {
+        background: white;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        hr {
+            width: 100%;
+
+        }
+        .card_head {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            max-width: 300px;
+            height: 270px;
+            z-index: 0;
+          }
+        } 
+        .card_body {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+        }   
+        .card_footer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            button {
+                width: 100%;
+                max-width: 320px;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        .attributes {
+            background-color: white;
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .row {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            h6, h4 {
+                text-transform: capitalize;
+            }
+            svg {
+                width: 25px;
+                height: 25px;
+                transition: 0.4s;
+                &:hover {
+                    transition: 0.4s;
+                    color: $primary-color;
+                }
+            }
+            .card_interactions {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                .in_basket {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    &:hover {
+        overflow: visible;
+        box-shadow: none;
+        z-index: 2;
+        transition: 0.3s;
+        .card_container {
+            position: absolute;
+            box-shadow: 0px 4px 20px 0px #0000001A;
+            transform: scale(1.05);
+            .attributes {
+                display: flex;
+            }
+        }
+    }
+}
+
+.showed {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: 0.4s;
+}

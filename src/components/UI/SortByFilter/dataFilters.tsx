@@ -21,6 +21,22 @@ export const sortByFilterArray: ISelectOptions[] = [
         label: "Worst",
         value: "worst"
     },
+    {
+        label: "From expensive to cheap",
+        value: "expensive"
+    },
+    {
+        label: "From cheap to expensive",
+        value: "cheap"
+    },
+    {
+        label: "Newest",
+        value: "newest"
+    },
+    {
+        label: "Latest",
+        value: "latest"
+    },
 ]
 
 export const sortByDefaultValue: ISelectOptions = {

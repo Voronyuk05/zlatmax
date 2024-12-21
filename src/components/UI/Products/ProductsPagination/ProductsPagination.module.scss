@@ -19,17 +19,19 @@
       height: 30px;
       background-color: $primary-color;
       border-radius: 10px;
-      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      a {
+        color: white;
+      }
     }
     li {
       width: 30px;
       height: 30px;
       border-radius: 10px;
-      color: black;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -46,7 +48,9 @@
       background-color: #fff;
       border: #D1D1D1 1px solid;
       transition: 0.3s;
-      color: black;
+      a {
+        color: black;
+      }
     }
   }
   

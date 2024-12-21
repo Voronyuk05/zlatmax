@@ -17,10 +17,6 @@ export default function ProductsLayout({children}: PropsWithChildren) {
         
         setSearchParamsObj(paramsObj);
     }, [searchParams])
-
-    useEffect(() => {
-        window.scrollTo(0,0);
-    }, [])
     
     return (
         <>

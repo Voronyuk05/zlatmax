@@ -1,10 +1,10 @@
-import typesServices from "@/services/types.service";
+import typesServices from "@/services/apiServices/types.service";
 import { useQuery } from "@tanstack/react-query";
 
-export const useGetTypeById = (id: number) => {
+export const useGetTypeById = (id: number | string) => {
     const {data, isLoading} = useQuery({
         queryKey: ['type by id', id],
-        queryFn: () => typesServices.getTypeById(id),
+        queryFn: () => typesServices.getTypesById(id),
         select: (data) => data[0]
     })
 

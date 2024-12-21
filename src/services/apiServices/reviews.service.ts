@@ -1,4 +1,4 @@
-import { IReview } from '../types/apiTypes/reviews.types';
+import { IReview } from '../../types/apiTypes/reviews.types';
 import axios from "axios"
 
 class ReviewsServices {
@@ -10,7 +10,7 @@ class ReviewsServices {
         )
     }
 
-    async getReviewsByProductId(productId: number) {
+    async getReviewsByProductId(productId: number | string) {
         return await axios.get<IReview[]>(`${this.URL}?product_id=${productId}`).then(
             ({data}) => data
         )

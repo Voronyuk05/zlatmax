@@ -23,7 +23,7 @@ export const selectBasketProducts = createSelector(
 export const selectBasketItemsSum = createSelector(
     [selectBasketItems], 
     (items: IBasketItem) => {
-        const totalSum = Object.values(items).reduce((sum, item) => sum + item.product.price, 0);
+        const totalSum = Object.values(items).reduce((sum, item) => sum + (item.product.price * item.amount), 0);
         return totalSum
     }
 )

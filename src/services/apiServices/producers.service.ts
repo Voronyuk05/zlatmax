@@ -10,7 +10,7 @@ class ProducersServices {
         )
     }
 
-    async getProducerById(id: number) {
+    async getProducerById(id: number | string) {
         return await axios.get<IProducer[]>(`${this.URL}?producer_id=${id}`).then(
             ({data}) => data
         )
@@ -22,7 +22,7 @@ class ProducersServices {
         )
     }
 
-    async getProducersByTypeId(typeId: number) {
+    async getProducersByTypeId(typeId: number | string) {
         return await axios.get<IProducer[]>(`${this.URL}?type_id=${typeId}`).then(
             ({data}) => data
         )

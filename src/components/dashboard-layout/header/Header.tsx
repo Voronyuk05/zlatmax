@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useAppSelector } from '@/lib/store';
@@ -5,13 +6,13 @@ import { selectBasketItems, selectBasketItemsSum } from '@/lib/features/selector
 import { SelectEl } from '@/components/UI/Select/Select';
 import { Nav } from '../../UI/Nav/Nav';
 import { Logo } from '../../UI/Logo/Logo';
-import { MenuNav } from '../../UI/MenuNav/MenuNav';
 import { Headings } from '../../UI/Headings/Headings';
 import { IoArrowBack } from "react-icons/io5";
 import { LikeIcon, BasketIcon, SearchIcon } from '../../UI/Icons/Icons';
 import Link from 'next/link';
 import styles from './Header.module.scss'
 import './selectorStyles.scss'
+const MenuNav = dynamic(() => import('../../UI/MenuNav/MenuNav'), { ssr: false });
 
 const telsData = [
     {
@@ -57,11 +58,11 @@ export const Header = () => {
                                 <SearchIcon/>
                                 <input type="text" placeholder='Search' />
                             </div>
-                            <div className={styles.interactions}>
-                                <div className={styles.wrapper_phone_numbers}>
-                                    <SelectEl className='react_tel_select_container' options={telsData} selectedOption={telOptions} setSelectedOption={setTelOptions} />
+                            <div className={styles.wrapper_phone_numbers}>
+                                    <SelectEl className='react-tel-select-container' options={telsData} selectedOption={telOptions} setSelectedOption={setTelOptions} />
                                     <Link href={`/basket`}>Request a call</Link>
-                                </div>
+                            </div>
+                            <div className={styles.interactions}>
                                 <div>
                                     <LikeIcon/>
                                 </div>
@@ -77,7 +78,7 @@ export const Header = () => {
                                 </div>
                             </div>
                         </div>
-                        <MenuNav />
+                        {isShowed ? <MenuNav /> : null}
                     </div>
                     <div className={`${styles.burger} ${isShowed ? styles.checked : ''}`} onClick={handleMenu}>
                         <span></span>

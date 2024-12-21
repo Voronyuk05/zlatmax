@@ -6,7 +6,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { getSearchParamByKey } from "./getSearchParamByKey"
 
 
-export const SortByFilter = ({searchParamName, filterParamLabel, options}: {searchParamName: string, filterParamLabel: string, options: ISelectOptions[] }) => {
+export const SortByFilter = ({searchParamName, filterParamLabel, options, className}: {searchParamName: string, filterParamLabel: string, options: ISelectOptions[], className?: string}) => {
     const searchParams = useSearchParams()
     const path = usePathname()
     const {replace} = useRouter()
@@ -31,6 +31,6 @@ export const SortByFilter = ({searchParamName, filterParamLabel, options}: {sear
     }
 
     return (
-        <SelectEl options={options} selectedOption={selectedOption} setSelectedOption={(e: ISelectOptions) => changeOption(e)} data-testid={searchParamName}/>
+        <SelectEl className={className} options={options} selectedOption={selectedOption} setSelectedOption={(e: ISelectOptions) => changeOption(e)} data-testid={searchParamName}/>
     )
 }

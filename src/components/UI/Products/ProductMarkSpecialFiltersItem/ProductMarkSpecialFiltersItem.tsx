@@ -3,9 +3,9 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Headings } from '../../Headings/Headings'
 import { InputDoubleRange } from '../../InputDoubleRange/InputDoubleRange';
 import LoadingCircle from '../../LoadingCircle/LoadingCircle';
-import styles from './ProductSpecialFiltersItem.module.scss'
+import styles from '../ProductsFilters/ProductsFilters.module.scss'
 
-export const ProductSpecialFiltersItem = ({filterName, productAttributeMax}: {filterName: string, productAttributeMax: number}) => {
+export const ProductSpecialFiltersItem = ({filterName, productAttributeMax, productAttributeMin}: {filterName: string, productAttributeMax: number, productAttributeMin: number}) => {
     const [isLoading, setIsLoading] = useState(false)
     const [isShowedFilter, setIsShowedFilter] = useState(true)
     const filterTitleName = filterName.replace(/_/, ' ')
@@ -29,7 +29,7 @@ export const ProductSpecialFiltersItem = ({filterName, productAttributeMax}: {fi
                     <MdOutlineKeyboardArrowDown className={`${!isShowedFilter ? styles.turned : ''}`}/>
                 </div>
                 <div className={`${isShowedFilter ? '' : styles.hidden} ${styles.filter_item_body}`}>
-                    <InputDoubleRange searchParamName={filterName} minValue={10} maxValue={productAttributeMax} step={1}/>
+                    <InputDoubleRange searchParamName={filterName} minValue={productAttributeMin} maxValue={productAttributeMax} step={1}/>
                 </div>
             </div>
             {isLoading && <LoadingCircle />}

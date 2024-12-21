@@ -1,4 +1,4 @@
-import producersServices from "@/services/producers.service";
+import producersServices from "@/services/apiServices/producers.service";
 import { useQuery } from "@tanstack/react-query";
 
 export const useGetAllProducers = () => {

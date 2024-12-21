@@ -1,0 +1,33 @@
+@import '/src/app/colors.scss';
+
+.attribute {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .attribute_name {
+        text-transform: capitalize;
+    }
+    .attribute_items_list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      .attribute_item {
+        padding: 5px 10px;
+        border: $secondary-color 1px solid;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+            transition: 0.2s;
+            border: $primary-color 1px solid;
+            background-color: $primary-color;
+            h6 {
+                color: white;
+            }
+        }
+      }
+      .active_attribute_item {
+        border: $primary-color 1px solid;
+      }
+    }
+}

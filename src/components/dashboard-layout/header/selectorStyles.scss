@@ -1,8 +1,10 @@
-div.react_tel_select_container {
+@import '/src/app/colors.scss';
+
+div.react-tel-select-container {
   height: 30px;
   border: none;
   outline: none;
-  z-index: 100;
+  z-index: 9;
   div.react-select__control {
     height: 30px;
     min-height: 30px;
@@ -18,6 +20,7 @@ div.react_tel_select_container {
   div.react-select__control:hover {
     border: none;
     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
+    z-index: 9;
   }
     
   div.react-select__value-container {
@@ -41,6 +44,20 @@ div.react_tel_select_container {
     
   .react-select__indicator-separator {
     display: none;
+  }
+
+  div.react-select__control .react-select__menu {
+    z-index: 100;
+  }
+
+  div.react-select__option {
+    &:hover {
+      background-color: $primary-bg-color;
+    }
+  }
+
+  div.react-select__option--is-selected {
+    background-color: $primary-color;
   }
 }
 

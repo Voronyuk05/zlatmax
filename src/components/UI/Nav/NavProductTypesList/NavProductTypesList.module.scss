@@ -1,0 +1,119 @@
+@import '/src/app/colors.scss';
+
+.nav_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        -webkit-user-select: none; 
+        -ms-user-select: none; 
+        user-select: none;
+        .arrow {
+            color: $primary-color;
+        }
+    }
+    .types_menu {
+        height: 500px;
+        position: absolute;
+        top: 60px;
+        left: -50px;
+        background-color: $black-color;
+        display: none;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 30px;
+        border-radius: 20px;
+        .types_list {
+            width: 300px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            .types_item {
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 4px;
+                cursor: pointer;
+                transition: 0.2s ease-in;
+                h5 {
+                    text-transform: capitalize;
+                    -webkit-user-select: none; 
+                    -ms-user-select: none; 
+                    user-select: none;
+                }
+                .type_arrow {
+                    transform: rotate(-90deg);
+                    color: $white-color;
+                }
+                &:hover {
+                    background-color: $primary-bg-color;
+                }
+            }
+            .hovered_type {
+                transition: 0.2s ease-out;
+                padding-left: 20px;
+                background-color: $primary-bg-color;
+                .type_arrow {
+                    color: $primary-color
+                }
+            }
+        }
+        .type_filters {
+            width: 900px;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 30px;
+            .filter_column {
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .filter_name {
+                    text-transform: capitalize;
+                }
+                .filter_items_list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    .filter_item {
+                        color: white;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.showed {
+    .title {
+        .arrow {
+            transform: rotate(180deg);
+            transition: 0.3s;
+        }
+    }
+    .types_menu {
+        display: flex;
+    }
+}

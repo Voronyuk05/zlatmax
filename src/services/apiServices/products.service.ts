@@ -11,8 +11,8 @@ class ProductsServices {
         )
     }
 
-    async getProductById(id: number) {
-        return await axios.get<IProduct[]>(`${this.URL}?id=${id}`).then(
+    async getProductById(id: number | string) {
+        return await axios.get<IProduct[]>(`${this.URL}?product_id=${id}`).then(
             ({data}) => data
         )
     }
@@ -27,6 +27,17 @@ class ProductsServices {
             ({data}) => data
         )
     }
+
+    async getProductsByChosenAttributes(attributeExcludeName: string, searchParams: ISearchParametrs) {
+        const chosenAttributesObj: ISearchParametrs = {}
+        const chosenAttributes = Object.entries(searchParams).filter((attribute) => attribute[0] !== attributeExcludeName)
+        chosenAttributes.forEach((attribute) => {
+            chosenAttributesObj[attribute[0]] = attribute[1]
+        })
+        
+        return await this.getProductsBySearchParams(chosenAttributesObj)
+    }
+    
 }
 
 const productsServices = new ProductsServices()

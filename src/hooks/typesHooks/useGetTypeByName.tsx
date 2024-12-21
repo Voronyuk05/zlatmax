@@ -1,4 +1,4 @@
-import typesServices from "@/services/types.service";
+import typesServices from "@/services/apiServices/types.service";
 import { useQuery } from "@tanstack/react-query";
 
 export const useGetTypeByName = (name: string) => {
