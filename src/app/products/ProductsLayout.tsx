@@ -1,26 +1,17 @@
 'use client'
-import { ProductsSection } from "@/components/UI/Products/ProductsSection/ProductsSection";
-import { ISearchParametrs } from "@/types/searchParameters.types";
-import { useSearchParams } from "next/navigation";
-import { PropsWithChildren, useEffect, useState } from "react";
+import { PropsWithChildren, Suspense } from "react";
+import LoadingCircle from "@/components/UI/LoadingCircle/LoadingCircle";
+import { ProductsSection } from "./ProductsSection/ProductsSection";
+import { LayoutProps } from "@/types/layout.type";
 
-export default function ProductsLayout({children}: PropsWithChildren) {
-    const searchParams = useSearchParams()
-    const [searchParamsObj, setSearchParamsObj] = useState<ISearchParametrs>({})
-    const currentTypeId = searchParamsObj.type_id ? Number(searchParamsObj.type_id) : 0
-
-    useEffect(() => {
-        const paramsObj: ISearchParametrs = {}
-        searchParams.forEach((value, key) => {
-          paramsObj[key] = value;
-        });
-        
-        setSearchParamsObj(paramsObj);
-    }, [searchParams])
+export default function ProductsLayout({children, searchParams}: PropsWithChildren & LayoutProps) {
+    const currentTypeId = searchParams.type_id ? Number(searchParams.type_id) : 0
     
     return (
         <>
-            <ProductsSection searchParams={searchParamsObj} productsTypeId={currentTypeId}/>
+            <Suspense fallback={<LoadingCircle/>}>
+                <ProductsSection searchParams={searchParams} productsTypeId={currentTypeId} />
+            </Suspense>
             {children}
         </>
     )

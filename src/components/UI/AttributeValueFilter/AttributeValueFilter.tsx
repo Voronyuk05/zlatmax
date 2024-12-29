@@ -1,15 +1,15 @@
 import { useGetProductsMarksByChosenAttributes } from "@/hooks/productsMarksHooks/useGetProductsMarksByChosenAttributes"
 import { IAttribute } from "@/types/apiTypes/attributes.types"
-import { ProductSpecialFiltersItem } from "../Products/ProductMarkSpecialFiltersItem/ProductMarkSpecialFiltersItem"
+import { ProductSpecialFiltersItem } from "../Products/ProductsFilters/ProductMarkSpecialFiltersItem/ProductMarkSpecialFiltersItem"
 import LoadingCircle from "../LoadingCircle/LoadingCircle"
 import { ISearchParametrs } from "@/types/searchParameters.types"
 
 export const AttributeValueFilter = ({attribute_name, searchParams}: IAttribute & {searchParams: ISearchParametrs}) => {
-    const {data, isLoading} = useGetProductsMarksByChosenAttributes(attribute_name, searchParams)
+    const {productsMarksByChosenAttributesData, isProductsMarksByChosenAttributesLoading} = useGetProductsMarksByChosenAttributes(attribute_name, searchParams)
     
-    if (isLoading) <LoadingCircle/>
+    if (isProductsMarksByChosenAttributesLoading) <LoadingCircle/>
 
-    const filteredProducts = data ? data.sort((a,b) => {
+    const filteredProducts = productsMarksByChosenAttributesData ? productsMarksByChosenAttributesData.sort((a,b) => {
         const AProductAttributeValue = a.attributes ? Number(a.attributes[attribute_name]) : 0
         const BProductAttributeValue = b.attributes ? Number(b.attributes[attribute_name]) : 0
 

@@ -21,20 +21,20 @@ const ProductMarkCardAttributes = dynamic(() => import('./ProductMarkCardAttribu
 
 export default function ProductMarkCard({productMarkData}: {productMarkData: IProductMark}) {
     const {product_id, product_mark_id, article, card_img, rating, attributes, price} = productMarkData
-    const {data: productData, isLoading: isProductDataLoading} = useGetProductById(product_id)
+    const {productByIdData, isProductByIdLoading} = useGetProductById(product_id)
     const {attributesByAvailableProductsMarksData} = useGetAttributesByAvailableProductsMarks({product_id: `${product_id}`})
     const {push} = useRouter()
     const dispatch = useAppDispatch()
     const basketItems = useAppSelector(selectBasketItems)
-    const {data: reviewsData} = useGetReviewsByProductId(product_mark_id)
+    const {reviewsByProductIdData} = useGetReviewsByProductId(product_mark_id)
     const { ref, inView } = useInView({triggerOnce: true, threshold: 0.3})
     const [isCardHovered, setIsCardHovered] = useState(false)
 
 
-    if (!productData) {
+    if (!productByIdData) {
         return null
     }
-    const {name} = productData 
+    const {name} = productByIdData 
 
     const handleGetProductMarkArticleSearchParamsObj = () => {
         const productMarkArticleSearchParamsObj: ISearchParametrs = {}
@@ -77,9 +77,9 @@ export default function ProductMarkCard({productMarkData}: {productMarkData: IPr
         )
     }
     
-    if (isProductDataLoading) return <LoadingCircle/>
+    if (isProductByIdLoading) return <LoadingCircle/>
 
-    if (productData) 
+    if (productByIdData) 
     return (
         <div ref={ref} className={`${inView ? styles.showed : ''} ${styles.product_card}`} onMouseEnter={() => setIsCardHovered(true)} onMouseLeave={() => setIsCardHovered(false)}>
             <div className={styles.card_container}>
@@ -92,7 +92,7 @@ export default function ProductMarkCard({productMarkData}: {productMarkData: IPr
                     </div>
                     <div className={styles.row}>
                         <Stars rating={rating}/>
-                        <Headings heading="h6" color="secondary" weight="600">{`${reviewsData?.length} reviews`}</Headings>
+                        <Headings heading="h6" color="secondary" weight="600">{`${reviewsByProductIdData?.length} reviews`}</Headings>
                     </div>
                 </div>
                 <hr />

@@ -1,21 +1,22 @@
+import toast from 'react-hot-toast';
 import { useAppDispatch, useAppSelector } from '@/lib/store';
 import { useGetAttributesByAvailableProductsMarks } from '@/hooks/attributesHooks/useGetAttributesByAvailableProductsMarks';
 import { addToBasket } from '@/lib/features/basket/basketSlice';
 import { selectBasketItems } from '@/lib/features/selectors';
 import { IProduct } from '@/types/apiTypes/products.types'
-import { ProductImgsSwiper } from '../ProductImgsSwiper/ProductImgsSwiper'
-import { LikeIcon, ComparisonIcon, BasketIcon, PlacedBasketIcon } from '../../Icons/Icons';
-import { Stars } from '../../Stars/Stars';
-import { AttributeSelect } from '../../AttributeSelect/AttributeSelect';
-import { Headings } from '../../Headings/Headings';
-import { SecondaryButton } from '../../Buttons/SecondaryButton';
-import { DarkButton } from '../../Buttons/DarkButton';
-import { PrimaryButton } from '../../Buttons/PrimaryButton';
+import { ProductImgsSwiper } from '@/components/UI/ImgsThumbsSwiper/ProductImgsSwiper'
+import { LikeIcon, ComparisonIcon, BasketIcon, PlacedBasketIcon } from '@/components/UI/Icons/Icons';
+import { Stars } from '@/components/UI/Stars/Stars';
+import { AttributeSelect } from '@/components/UI/AttributeSelect/AttributeSelect';
+import { Headings } from '@/components/UI/Headings/Headings';
+import { SecondaryButton } from '@/components/UI/Buttons/SecondaryButton';
+import { DarkButton } from '@/components/UI/Buttons/DarkButton';
+import { PrimaryButton } from '@/components/UI/Buttons/PrimaryButton';
+import LoadingCircle from '@/components/UI/LoadingCircle/LoadingCircle';
 import { ISearchParametrs } from '@/types/searchParameters.types';
 import { IProductMark } from '@/types/apiTypes/productsMarks.type';
 import styles from './ProductArticle.module.scss'
 import './attributeSelectorStyles.scss'
-import LoadingCircle from '../../LoadingCircle/LoadingCircle';
 
 export const ProductArticle = ({productData, productMarkData, searchParams}: {productData: IProduct, productMarkData: IProductMark, searchParams: ISearchParametrs}) => {
     const {name, brand, series} = productData
@@ -26,6 +27,15 @@ export const ProductArticle = ({productData, productMarkData, searchParams}: {pr
 
     const handleAddProdutsToBasket = () => {
         dispatch(addToBasket({product: productMarkData}))
+        toast(`${name[0].toLocaleUpperCase()}${name.slice(1)} added to basket`,
+            {
+                style: {
+                    borderRadius: '10px',
+                    background: '#615959',
+                    color: '#fff',
+                },
+            }
+        )
     }
 
     return (
@@ -80,13 +90,6 @@ export const ProductArticle = ({productData, productMarkData, searchParams}: {pr
                         </>
                     ) : isAttributesByAvailableProductsMarksLoading ? <LoadingCircle /> : null}
                     <div className={styles.row}>
-                        {/* <div className={styles.product_amount_switcher}>
-                            <DarkButton onClick={() => handleDecreaseAmount()}>-</DarkButton>
-                            <div className={styles.product_amount}>
-                                <Headings heading='h5' color='black' weight='500'>{`${productAmount}`}</Headings>
-                            </div>
-                            <DarkButton onClick={() => handleIncreaseAmount()}>+</DarkButton>
-                        </div> */}
                         <Headings heading='h2' weight='700' color='black'>{`${price} $`}</Headings>
                         <div className={styles.interactions}>
                             {!basketItems[product_mark_id] ? <PrimaryButton className={styles.add_to_cart_button} onClick={handleAddProdutsToBasket}>

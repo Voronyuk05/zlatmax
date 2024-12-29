@@ -60,7 +60,7 @@ export const Header = () => {
                             </div>
                             <div className={styles.wrapper_phone_numbers}>
                                     <SelectEl className='react-tel-select-container' options={telsData} selectedOption={telOptions} setSelectedOption={setTelOptions} />
-                                    <Link href={`/basket`}>Request a call</Link>
+                                    <Link href={`/`}>Request a call</Link>
                             </div>
                             <div className={styles.interactions}>
                                 <div>

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { Headings } from '../../Headings/Headings'
-import { InputDoubleRange } from '../../InputDoubleRange/InputDoubleRange';
-import LoadingCircle from '../../LoadingCircle/LoadingCircle';
-import styles from '../ProductsFilters/ProductsFilters.module.scss'
+import { Headings } from '../../../Headings/Headings'
+import { InputDoubleRange } from '../../../InputDoubleRange/InputDoubleRange';
+import LoadingCircle from '../../../LoadingCircle/LoadingCircle';
+import styles from '../ProductsFilters.module.scss'
 
 export const ProductSpecialFiltersItem = ({filterName, productAttributeMax, productAttributeMin}: {filterName: string, productAttributeMax: number, productAttributeMin: number}) => {
     const [isLoading, setIsLoading] = useState(false)
@@ -14,12 +14,12 @@ export const ProductSpecialFiltersItem = ({filterName, productAttributeMax, prod
         let timer: NodeJS.Timeout
         if (isLoading) {
           timer = setTimeout(() => {
-            setIsLoading(false);
-          }, 500);
+            setIsLoading(false)
+          }, 500)
         }
 
         return () => clearTimeout(timer);
-    }, [isLoading]);
+    }, [isLoading])
 
     return (
         <>

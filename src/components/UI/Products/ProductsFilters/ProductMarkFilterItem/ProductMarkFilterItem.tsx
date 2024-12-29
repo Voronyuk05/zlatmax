@@ -1,15 +1,15 @@
 import { useGetProductsMarksByChosenAttributes } from "@/hooks/productsMarksHooks/useGetProductsMarksByChosenAttributes";
 import { ISearchParametrs } from "@/types/searchParameters.types";
-import LoadingCircle from "../../LoadingCircle/LoadingCircle";
+import LoadingCircle from "../../../LoadingCircle/LoadingCircle";
 import { IProductMark } from "@/types/apiTypes/productsMarks.type";
 import { ProductSpecialFiltersItem } from "../ProductMarkSpecialFiltersItem/ProductMarkSpecialFiltersItem";
 
 export const ProductMarkFilterItem = ({filterName, searchParams}: {filterName: keyof IProductMark, searchParams: ISearchParametrs}) => {
-    const {data, isLoading} = useGetProductsMarksByChosenAttributes(filterName, searchParams)
+    const {productsMarksByChosenAttributesData, isProductsMarksByChosenAttributesLoading} = useGetProductsMarksByChosenAttributes(filterName, searchParams)
     
-    if (isLoading) <LoadingCircle/>
+    if (isProductsMarksByChosenAttributesLoading) <LoadingCircle/>
 
-    const filteredProducts = data ? data.sort((a,b) => {
+    const filteredProducts = productsMarksByChosenAttributesData ? productsMarksByChosenAttributesData.sort((a,b) => {
         const AProductAttributeValue = Number(a[filterName])
         const BProductAttributeValue = Number(b[filterName])
 

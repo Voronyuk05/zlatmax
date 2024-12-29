@@ -140,16 +140,22 @@
                         svg {
                             color: white;
                         }
+                        .wrapper_phone_numbers {
+                            a {
+                                color: $primary-color;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                              }
+                            svg {
+                                color: white;
+                            }
+                        }
                         .interactions {
                             flex-direction: row;
                             gap: 50px;
                             h4,h5,h6,a {
                                 color: white;
-                            }
-                            .wrapper_phone_numbers {
-                                svg {
-                                    color: black;
-                                }
                             }
                         }
                         .wrapper_search_input {

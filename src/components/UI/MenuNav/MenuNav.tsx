@@ -44,12 +44,12 @@ export default function MenuNav() {
                                         <div className={styles.filter_column}>
                                             {chosedFilterItem === 'categories' ? categoriesByAvailableProductsMarksData.map(({category_id, category_name}) => (
                                                 <div key={category_id} className={styles.filter_item} onClick={() => push(`/products?type_id=${type_id}&category_id=${category_id}`)}>
-                                                        <Headings heading='h4' color='white' weight='500'>{category_name}</Headings>
+                                                    <Headings heading='h4' color='white' weight='500'>{category_name}</Headings>
                                                 </div>
                                             )) : attributesByAvailableProductsMarksData?.map(({attribute_name, attribute_items}) => {
                                                 if (attribute_name === chosedFilterItem) return attribute_items?.map(({attribute_item_id, attribute_item_name}) => (
                                                     <div key={attribute_item_id} className={styles.filter_item} onClick={() => push(`/products?type_id=${type_id}&${attribute_name}=${attribute_item_id}`)}>
-                                                            <Headings heading='h4' color='white' weight='500'>{attribute_item_name}</Headings>
+                                                        <Headings heading='h4' color='white' weight='500'>{attribute_item_name}</Headings>
                                                     </div>
                                                 )
                                                 )

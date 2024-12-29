@@ -9,7 +9,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import LoadingCircle from '../../LoadingCircle/LoadingCircle';
 import { ISearchParametrs } from '@/types/searchParameters.types';
 import { AttributeValueFilter } from '../../AttributeValueFilter/AttributeValueFilter';
-import { ProductMarkFilterItem } from '../ProductMarkFilterItem/ProductMarkFilterItem';
+import { ProductMarkFilterItem } from './ProductMarkFilterItem/ProductMarkFilterItem';
 import styles from './ProductsFilters.module.scss';
 
 export const ProductsFilters = ({searchParams}: {searchParams: ISearchParametrs}) => {

@@ -5,15 +5,29 @@ class ReviewsServices {
     private URL = "http://localhost:4000/reviews"
 
     async getAllReviews() {
-        return await axios.get<IReview[]>(this.URL).then(
-            ({data}) => data
-        )
+        try {
+            return await axios.get<IReview[]>(this.URL).then(
+                ({data}) => data
+            )
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                console.error(error.message);
+            }
+            throw new Error('Server is not available')
+        }
     }
 
     async getReviewsByProductId(productId: number | string) {
-        return await axios.get<IReview[]>(`${this.URL}?product_id=${productId}`).then(
-            ({data}) => data
-        )
+        try {
+            return await axios.get<IReview[]>(`${this.URL}?product_id=${productId}`).then(
+                ({data}) => data
+            )
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                console.error(error.message);
+            }
+            throw new Error('Server is not available')
+        }
     }
 }
 

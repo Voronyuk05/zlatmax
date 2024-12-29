@@ -3,10 +3,10 @@ import productsMarksServices from "@/services/apiServices/productsMarks.service"
 import { ISearchParametrs } from "@/types/searchParameters.types";
 
 export const useGetProductsMarksBySearchParams = (searchParams: ISearchParametrs) => {
-    const {data, isLoading} = useQuery({
+    const {data: productsMarksBySearchParamsData, isLoading: isProductsMarksBySearchParamsLoading} = useQuery({
         queryKey: ['products marks by search params', searchParams],
         queryFn: () => productsMarksServices.getProductsMarksBySearchParams(searchParams)
     })
 
-    return {data, isLoading}
+    return {productsMarksBySearchParamsData, isProductsMarksBySearchParamsLoading}
 }

@@ -4,6 +4,7 @@ import typesServices from "../apiServices/types.service"
 class FilteredTypesServices {
     async getTypesByAvailableCategories() {
         const types = await typesServices.getAllTypes()
+            
         const availableTypesPromise = types.map(async (type) => {
             const categoriesByTypeId = await filteredCategoriesServices.getCategoriesByAvailableProductsMarks(type.type_id)
             

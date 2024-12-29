@@ -9,7 +9,6 @@ class FilteredProducersServices {
     async getProducersByAvailableProducts(searchParams: ISearchParametrs) {
         const producersData = await producersServices.getAllProducers()
 
-        if (producersData) {
             const availableProducersPromise = producersData.map(async ({type_id, producer_id, producer_name, producer_description, producer_img}) => {
                 const filteredProducts = await productsServices.getProductsByChosenAttributes('producer_id', searchParams)
                 const filteredPorudctsMarks = await productsMarksServices.getProductsMarksByChosenAttributes('producer_id', searchParams)
@@ -35,9 +34,6 @@ class FilteredProducersServices {
             const availableProducers = (await Promise.all(availableProducersPromise)).filter(item => item !== undefined);
     
             return availableProducers
-        } else {
-            return Promise.reject('Error')
-        }
     }
 }
 

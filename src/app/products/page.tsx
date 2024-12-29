@@ -1,10 +1,13 @@
+import { PageProps } from "@/types/page.types"
 import ProductsLayout from "./ProductsLayout"
 
 
-export default function ProductsPage() {
+export default async function ProductsPage({searchParams}: PageProps) {
+    const pageSearchParams = await searchParams
+
     return (
         <>
-            <ProductsLayout/>
+            <ProductsLayout searchParams={pageSearchParams}/>
         </>
     )
 }

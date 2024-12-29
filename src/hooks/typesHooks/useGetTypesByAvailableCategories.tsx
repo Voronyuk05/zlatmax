@@ -2,10 +2,10 @@ import filteredTypesServices from "@/services/clientServices/filteredTypes.servi
 import { useQuery } from "@tanstack/react-query"
 
 export const useGetTypesByAvailableCategories = () => {
-    const {data: typesByAvailableCategoriesData, isLoading: isTypesByAvailableCategoriesLoading} = useQuery({
+    const {data: typesByAvailableCategoriesData, isLoading: isTypesByAvailableCategoriesLoading, error} = useQuery({
         queryKey: ['types by available categories'],
         queryFn: () => filteredTypesServices.getTypesByAvailableCategories()
     })
 
-    return {typesByAvailableCategoriesData, isTypesByAvailableCategoriesLoading}
+    return {typesByAvailableCategoriesData, isTypesByAvailableCategoriesLoading, error}
 }

@@ -10,9 +10,9 @@ import styles from './RatingFilter.module.scss'
 
 
 export const RatingFilter = ({searchParams}: {searchParams: ISearchParametrs}) => {
-    const {data, isLoading: isProductsMarksByChosenAttributesLoading} = useGetProductsMarksByChosenAttributes('rating', searchParams)
+    const {productsMarksByChosenAttributesData, isProductsMarksByChosenAttributesLoading} = useGetProductsMarksByChosenAttributes('rating', searchParams)
     const availableRatings = [5,4,3,2,1].filter((value) => {
-        if (data?.some(({rating: productMarkRating}) => productMarkRating === value)) {
+        if (productsMarksByChosenAttributesData?.some(({rating: productMarkRating}) => productMarkRating === value)) {
             return value
         }
     })

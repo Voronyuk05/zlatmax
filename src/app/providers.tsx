@@ -1,6 +1,8 @@
 'use client'
 import { AppStore, makeStore } from '@/lib/store'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { ReactQueryStreamedHydration } from '@tanstack/react-query-next-experimental'
 import { PropsWithChildren, useRef, useState } from 'react'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
@@ -12,7 +14,8 @@ export const Providers = ({children}: PropsWithChildren) => {
     const [client] = useState(new QueryClient({
         defaultOptions: {
             queries: {
-                refetchOnWindowFocus: false
+                refetchOnWindowFocus: false,
+                retry: 0,
             }
         }
     }))
@@ -27,12 +30,15 @@ export const Providers = ({children}: PropsWithChildren) => {
 
     return (
         <QueryClientProvider client={client}>
-            <Provider store={storeRef.current}>
-                <PersistGate persistor={persistorRef.current}>
-                    {children}
-                    <Toaster position="top-center" reverseOrder={false}/>
-                </PersistGate>
-            </Provider>
+            <ReactQueryDevtools/>
+            <ReactQueryStreamedHydration>
+                <Provider store={storeRef.current}>
+                    <PersistGate persistor={persistorRef.current}>
+                        {children}
+                        <Toaster position="top-center" reverseOrder={false}/>
+                    </PersistGate>
+                </Provider>
+            </ReactQueryStreamedHydration>
         </QueryClientProvider>
     )
 }

@@ -1,5 +1,5 @@
 import { RiScales3Line } from "react-icons/ri";
-import { IoMdHeart } from "react-icons/io";
+import { TbHeart } from "react-icons/tb";
 import { TbBasket } from "react-icons/tb";
 import { TbBasketCheck } from "react-icons/tb";
 import { CiSearch } from "react-icons/ci";
@@ -32,7 +32,7 @@ export const PlacedBasketIcon = ({onClick, className, ...props}: IIconProps) => 
 
 export const LikeIcon = ({onClick, className, ...props}: IIconProps) => {
     return (
-        <IoMdHeart className={`${className} ${styles.icon}`} onClick={onClick} {...props}/>
+        <TbHeart className={`${className} ${styles.icon}`} onClick={onClick} {...props}/>
     )
 }
 

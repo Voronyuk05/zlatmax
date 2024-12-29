@@ -1,8 +1,8 @@
+'use server'
 
-export default function Home() {
+export default async function Page() {
   return (
     <div>
-
     </div>
-  );
+  )
 }

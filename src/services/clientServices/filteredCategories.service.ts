@@ -9,8 +9,11 @@ class FilteredCategoriesService {
         const products_ids = [...new Set(productsMarks.map(productMark => productMark.product_id))].join(',')
         const products = await productsServices.getProductsBySearchParams({product_id: products_ids})
         const productsCategories = [...new Set(products.map(product => product.category_id))].join(',')
+
+        const categoriesByAvailableProductsMarks = await categoriesServices.getCategoriesById(productsCategories)
+
+        return categoriesByAvailableProductsMarks
         
-        return await categoriesServices.getCategoriesById(productsCategories)
     }
 }
 

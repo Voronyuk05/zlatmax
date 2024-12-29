@@ -5,8 +5,8 @@ import styles from './SearchPill.module.scss'
 
 export const SearchPill = ({productId, attribute_name, attribute_value}: {productId: number ,attribute_name: string, attribute_value: string | number}) => {
     const {push} = useRouter()
-    const {data: attributeData} = useGetAttributeByName(attribute_name)
-    const attributeItem = attributeData?.attribute_items ? attributeData.attribute_items.filter(({attribute_item_id}) => attribute_item_id === attribute_value)[0] : null
+    const {attributeByNameData} = useGetAttributeByName(attribute_name)
+    const attributeItem = attributeByNameData?.attribute_items ? attributeByNameData.attribute_items.filter(({attribute_item_id}) => attribute_item_id === attribute_value)[0] : null
 
 
 

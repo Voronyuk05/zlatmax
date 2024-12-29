@@ -1,36 +1,22 @@
 'use client'
-import { PropsWithChildren, useEffect, useState } from "react"
+import { PropsWithChildren } from "react"
 import { useGetProductById } from "@/hooks/productsHooks/useGetProductById";
 import { useGetProductsMarksBySearchParams } from '@/hooks/productsMarksHooks/useGetProductsMarksBySearchParams';
-import { useParams, useSearchParams } from "next/navigation";
-import { ProductArticle } from "@/components/UI/Products/ProductArticle/ProductArticle";
+import { ProductArticle } from "./ProductArticle/ProductArticle";
 import LoadingCircle from "@/components/UI/LoadingCircle/LoadingCircle";
-import { ISearchParametrs } from "@/types/searchParameters.types";
+import { IProductLayoutProps } from "@/types/layout.type";
 
-export default function ProductArticleLayout({children}: PropsWithChildren) {
-    const searchParams = useSearchParams()
-    const [searchParamsObj, setSearchParamsObj] = useState<ISearchParametrs>({})
-    const {productId} = useParams<{productId: string}>()
-    const {data: productData, isLoading} = useGetProductById(Number(productId))
-    const {data: productMarkData} = useGetProductsMarksBySearchParams(searchParamsObj)
-    
-    useEffect(() => {
-        const paramsObj: ISearchParametrs = {}
-        searchParams.forEach((value, key) => {
-          paramsObj[key] = value;
-        });
-        paramsObj.product_id = String(productId)
-        
-        setSearchParamsObj(paramsObj);
-    }, [searchParams, productId])
+export default function ProductArticleLayout({children, params, searchParams}: PropsWithChildren & IProductLayoutProps) {
+    const {productByIdData, isProductByIdLoading} = useGetProductById(Number(params.productId))
+    const {productsMarksBySearchParamsData} = useGetProductsMarksBySearchParams(searchParams)
 
 
-    if (isLoading) <LoadingCircle/>
+    if (isProductByIdLoading) <LoadingCircle/>
 
-    if (productData && productMarkData?.length)
+    if (productByIdData && productsMarksBySearchParamsData?.length)
     return (
         <>
-            <ProductArticle productData={productData} productMarkData={productMarkData[0]} searchParams={searchParamsObj}/>
+            <ProductArticle productData={productByIdData} productMarkData={productsMarksBySearchParamsData[0]} searchParams={searchParams}/>
             {children}
         </>
     )

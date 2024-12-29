@@ -4,23 +4,14 @@ import attributesServices from '../apiServices/attributes.service';
 
 class FilteredAttributesServices {
 
-    async getProductsMarksByChosenAttributes(attributeName: string, searchParams: ISearchParametrs) {
-        const chosenAttributesObj: ISearchParametrs = {}
-        const chosenAttributes = Object.entries(searchParams).filter((attribute) => attribute[0] !== attributeName)
-        chosenAttributes.forEach((attribute) => {
-            chosenAttributesObj[attribute[0]] = attribute[1]
-        })
-        
-        return await productsMarksServices.getProductsMarksBySearchParams(chosenAttributesObj)
-    }
-
     async getAttributesByAvailableProductsMarks(searchParams: ISearchParametrs) {
         const attributesData = await attributesServices.getAllAttributes()
 
-        if (attributesData) {
             const availableAttributesPromise = attributesData?.map(async ({type_id, attribute_id, attribute_name, attribute_items}) => {
-                const filteredPorudctsMarks = await this.getProductsMarksByChosenAttributes(attribute_name, searchParams)
-    
+                const filteredPorudctsMarks = await productsMarksServices.getProductsMarksByChosenAttributes(attribute_name, searchParams)
+
+                if (!filteredPorudctsMarks || filteredPorudctsMarks.length === 0) return undefined
+
                 const isAttributeAvailable = filteredPorudctsMarks.some(({ attributes }) => attributes && Object.keys(attributes).includes(attribute_name))
     
                 if (isAttributeAvailable) {
@@ -50,14 +41,12 @@ class FilteredAttributesServices {
             const availableAttributes = (await Promise.all(availableAttributesPromise)).filter(item => item !== undefined);
     
             return availableAttributes
-        } else {
-            return Promise.reject('Error')
-        }
     }
 
     async getAttributesByProductId(product_id: number | string) {
         const productMarks = await productsMarksServices.getProductMarksByProductId(product_id)
         const attributes = await attributesServices.getAllAttributes()
+
         const productAttributes = attributes.map(({type_id, attribute_id, attribute_name, attribute_items}) => {
             if (attribute_items) {
 
